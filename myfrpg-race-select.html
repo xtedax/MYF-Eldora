@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Master Your Fate RPG - Race Select</title>
+    <link rel="stylesheet" href="css/style-myfrpg.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Russo+One&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="all-other-pages">
+    <main>
+        <div class="mainSelect">
+            <div class="headerBox">
+                <h3 class="pageTitle">Choose your Lineage</h3>
+            </div>
+
+            <!-- Races Images Container -->
+            <div class="gallery-container">
+
+                <!-- Dwarves -->
+                <div class="gallery-item lockSelect" data-race="dwarf">
+                    <div class="image-wrapper">
+                        <img src="img/dwarf-kingdom.png" alt="Image A1">
+                        <img src="img/dwarf-battle.png" alt="Image B1">
+                        <img src="img/dwarf-battle.png" alt="Image C1">
+                    </div>
+
+                    <div class="image-name">Dwarves</div>
+
+                    <!-- Hidden text source -->
+                    <div class="describe-main hidden">
+                        <p>Forged in the deep places of the world, Dwarves are children of stone and flame. Their
+                            subterranean halls echo with the songs of forges and the oaths of kin. Honor, craftsmanship,
+                            and loyalty define their way of life, and their creations — be they weapons or monuments —
+                            endure as testaments to their pride. Their resilience is legendary, but their stubbornness
+                            can harden into isolation. They worship the Great Forge, believing each soul to be a spark
+                            struck from its divine fire. In battle, they are immovable, fighting with disciplined
+                            formations, unmatched craftsmanship, and an unyielding will.</p>
+                    </div>
+                    <div class="describe-extra hidden">
+                        <span class='racials'><strong>Stoneborn Fortitude:</strong></span> +2 CON<br>
+                        <span class='racials'><strong>Stoneblood:</strong></span> Temporarily reduce all damage taken by
+                        20% and 20% resistance to knockback or stagger for 5 seconds<br>
+                        <span class='racials'><strong>Iron Grip:</strong></span> -75% Chance to be disarmed or slip when
+                        hanging on ledges, vines, cliffs, ropes or enemy limbs<span>
+                    </div>
+                </div>
+
+                <!-- Elves -->
+                <div class="gallery-item lockSelect" data-race="elf">
+                    <div class="image-wrapper">
+                        <img src="img/elf-kingdom.png" alt="Image A1">
+                        <img src="img/elf-battle.png" alt="Image B1">
+                        <img src="img/elf-battle.png" alt="Image C1">
+                    </div>
+
+                    <div class="image-name">Elves</div>
+
+                    <!-- Hidden text source -->
+                    <div class="describe-main hidden">
+                        <p>The Elves were the first to awaken beneath the starlit boughs of Eldora, their spirits
+                            intertwined with the rhythm of nature and the flow of magic. Graceful, ancient, and
+                            contemplative, they craft living cities and art that endure for millennia. Their wisdom is
+                            matched only by their melancholy, for long life teaches both wonder and sorrow. Elves revere
+                            balance and consequence, believing every action ripples through eternity. In war, they move
+                            like whispers of wind and light — precise, silent, and devastating — favoring archery,
+                            magic, and misdirection over brute force.</p>
+                    </div>
+                    <div class="describe-extra hidden">
+                        <span class='racials'><strong>Eldertide Grace:</strong></span> +2 DEX or +2 WIS<br>
+                        <span class='racials'><strong>Ancient Blessing:</strong></span> Adds a d6 saving throw to any
+                        chosen attribute<br>
+                        <span class='racials'><strong>Keen Senses:</strong></span> +75% Chance to detect hidden traps,
+                        weak illusions, or movement in fog/dark rooms<span>
+                    </div>
+                </div>
+
+                <!-- Humans -->
+                <div class="gallery-item lockSelect" data-race="human">
+                    <div class="image-wrapper">
+                        <img src="img/human-kingdom.png" alt="Image A1">
+                        <img src="img/human-battle.png" alt="Image B1">
+                        <img src="img/human-battle.png" alt="Image C1">
+                    </div>
+
+                    <div class="image-name">Humans</div>
+
+                    <!-- Hidden text source -->
+                    <div class="describe-main hidden">
+                        <p>Arrivals to Eldora rather than its originators, humans are defined by their resilience,
+                            adaptability, and relentless drive to find purpose in the unknown. They are builders,
+                            leaders, and dreamers—quick to shape the world around them, even when it is not their own.
+                            Their kingdoms rise from ambition and belief, fueled by a desire to endure, to belong, and
+                            to leave a lasting mark in a land that once stood beyond their reach. Versatile and
+                            resourceful, humans excel at strategy and cooperation, though their pride and impatience
+                            often place them at odds with both allies and rivals.
+
+                            Yet it is this same drive that has allowed them to stand alongside others in moments that
+                            demanded unity and resolve. In times when the fate of the world hung uncertain, humans
+                            proved capable not only of ambition, but of courage, sacrifice, and shared purpose—becoming
+                            a people not just defined by what they seek, but by what they choose to protect.</p>
+                    </div>
+                    <div class="describe-extra hidden">
+                        <span class='racials'><strong>Adaptive Potential:</strong></span> +1 to chosen attribute or
+                        proficiency<br>
+                        <span class='racials'><strong>Second Wind:</strong></span> Once per encounter, recover 20% HP or
+                        Stamina when dropping below 50% HP<br>
+                        <span class='racials'><strong>Versatile:</strong></span> +10% EXP gain to Talents and Weapon
+                        Mastery<span>
+                    </div>
+                </div>
+
+                <!-- Haflings -->
+                <div class="gallery-item lockSelect" data-race="hearthkin">
+                    <div class="image-wrapper">
+                        <img src="img/hearthkin-kingdom.png" alt="Image A1">
+                        <img src="img/hearthkin-battle.png" alt="Image B1">
+                        <img src="img/hearthkin-battle.png" alt="Image C1">
+                    </div>
+
+                    <div class="image-name">Hearthkin</div>
+
+                    <!-- Hidden text source -->
+                    <div class="describe-main hidden">
+                        <p>Once nomads of the open plains, Hearthkin now dwell in quiet villages where laughter
+                            and warmth define their days. They live simply yet deeply, finding joy in family, good
+                            harvests, and stories shared by the hearth. Though small in stature, their courage runs deep
+                            — born from generations of surviving in the shadows of greater powers. Their belief in
+                            hearth spirits and humble virtues gives them strength unseen. On the battlefield, they rely
+                            on wit and agility, striking from cover or laying clever traps, proving that heart often
+                            outweighs
+                            might.</p>
+                    </div>
+                    <div class="describe-extra hidden">
+                        <span class='racials'><strong>Quick Witted:</strong></span> +2 DEX or +2 INT<br>
+                        <span class='racials'><strong>Fortunate Twist:</strong></span> Once per encounter, turn a failed
+                        roll into a partial success<br>
+                        <span class='racials'><strong>Nimblefoot:</strong></span> +15% to dodge and
+                        stealth<span>
+                    </div>
+                </div>
+
+                <!-- Catlans -->
+                <div class="gallery-item lockSelect" data-race="catlan">
+                    <div class="image-wrapper">
+                        <img src="img/catlan-kingdom.png" alt="Image A1">
+                        <img src="img/catlan-battle.png" alt="Image B1">
+                        <img src="img/catlan-battle.png" alt="Image C1">
+                    </div>
+
+                    <div class="image-name">Catlans</div>
+
+                    <!-- Hidden text source -->
+                    <div class="describe-main hidden">
+                        <p>Descendants of a distant and unknown origin, the Catlans blend instinct, grace, and intellect
+                            in equal measure. Displaced and unrooted, they move through the world as hunters, wanderers,
+                            and quiet observers—guided less by law and more by intuition and experience. Their
+                            communities are bound by trust and shared understanding rather than rigid structure, valuing
+                            awareness of both self and surroundings above all else. Some speak of a guiding presence in
+                            the night sky, not as a god, but as something felt rather than known—an instinctive pull
+                            that shapes their path. In battle, Catlans are swift and unpredictable, moving like shifting
+                            shadows—striking with precision before vanishing from reach.
+                    </div>
+                    <div class="describe-extra hidden">
+                        <span class='racials'><strong>Feral:</strong></span> +2 STR or +2 DEX<br>
+                        <span class='racials'><strong>Pounce:</strong></span> Leap attack that spans 2 distance
+                        modifiers, deals damage, and staggers enemies<br>
+                        <span class='racials'><strong>Night Vision:</strong></span> Can see clearly in low-light and
+                        partial darkness<span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Info Text Containers -->
+            <div class="gameText" id="shortDescriptionContainer">
+                <p id="mainInfoText" class="centerText textInfo">The people you descend from shape the strength
+                    within
+                    you</p>
+            </div>
+            <!-- Racial Bonuses Containers -->
+            <div class="extraInfo">
+                <p id="extraInfoText" class="textInfo">Racial Strenghts and Passives</p>
+            </div>
+
+            <!-- Only one button visible for intro -->
+            <div id="standardBtnContainer">
+                <button id="confirmBtn" class="confirmProceed">Confirm and Proceed</button>
+            </div>
+        </div>
+    </main>
+    <!-- Modal for small screens -->
+    <div id="mobileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modalMainText"></div>
+            <div id="modalExtraInfo"></div>
+            <button id="confirmNext" class="confirmProceed">Confirm and Proceed</button>
+        </div>
+    </div>
+
+    <script src="js/script-myfrpg.js"></script>
+
+</body>
+
+</html>
