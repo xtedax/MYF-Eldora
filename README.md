@@ -6,15 +6,16 @@ Master Your Fate: Eldora is a fantasy RPG web project currently being developed 
 
 This project is part of the larger Master Your Fate Universe — a growing fantasy world filled with kingdoms, races, factions, lore, and legendary conflicts.
 
-The goal of this project is to combine:
+The goal of this project is to combine:<br>
 
-⚔️ RPG mechanics
-🧙 Fantasy storytelling
-🎮 Interactive gameplay systems
-🖼️ Dynamic UI/UX
-🌍 Immersive worldbuilding
-⚡ JavaScript-powered game logic
-
+<ul>
+<li>⚔️ RPG mechanics</li>
+<li>🧙 Fantasy storytelling</li>
+<li>🎮 Interactive gameplay systems</li>
+<li>🖼️ Dynamic UI/UX</li>
+<li>🌍 Immersive worldbuilding</li>
+<li>⚡ JavaScript-powered game logic</li>
+</ul><br>
 into a playable browser-based fantasy experience.
 
 🎮 Live Demo
