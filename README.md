@@ -1,6 +1,6 @@
-⚔️ Master Your Fate: Eldora
-<p align="center"> <img src="https://placehold.co/1200x400/1a1a1a/ffffff?text=MASTER+YOUR+FATE:+ELDORA" alt="Master Your Fate Eldora Banner"> </p> <p align="center"> <b>A fantasy RPG project built with HTML, CSS, and JavaScript.</b> </p> <p align="center"> <a href="https://xtedax.github.io/MYF-Eldora/"> <img src="https://img.shields.io/badge/🎮_LIVE_DEMO-Play_Now-blue?style=for-the-badge"> </a> <a href="https://github.com/xtedax/MYF-Eldora"> <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github"> </a> </p>
-🌌 About The Project
+<h1>⚔️ Master Your Fate: Eldora</h1>
+<p align="center"> <img src="https://placehold.co/1200x400/1a1a1a/ffffff?text=MASTER+YOUR+FATE:+ELDORA" alt="Master Your Fate Eldora Banner"> </p> <p align="center"> <b>A fantasy RPG project built with HTML, CSS, and JavaScript.</b> </p> <p align="center"> <a href="https://xtedax.github.io/MYF-Eldora/"> <img src="https://img.shields.io/badge/🎮_LIVE_DEMO-Play_Now-blue?style=for-the-badge"> </a> <a href="https://github.com/xtedax/MYF-Eldora"> <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github"> </a> </p><br>
+<h2>🌌 About The Project</h2><br>
 
 Master Your Fate: Eldora is a fantasy RPG web project currently being developed as part of my journey into full-stack web development, UI/UX design, game systems architecture, and worldbuilding.
 
@@ -8,7 +8,7 @@ This project is part of the larger Master Your Fate Universe — a growing fanta
 
 The goal of this project is to combine:<br>
 
-<ul style="list-style-type: none;">
+<ul>
 <li>⚔️ RPG mechanics</li>
 <li>🧙 Fantasy storytelling</li>
 <li>🎮 Interactive gameplay systems</li>
@@ -16,15 +16,15 @@ The goal of this project is to combine:<br>
 <li>🌍 Immersive worldbuilding</li>
 <li>⚡ JavaScript-powered game logic</li>
 </ul>
-into a playable browser-based fantasy experience.
+into a playable browser-based fantasy experience.<br><br>
 
 🎮 Live Demo
 ▶ Play Here:
-🌐 <a href="https://xtedax.github.io/MYF-Eldora/">Master Your Fate: Eldora</a>
+🌐 <a href="https://xtedax.github.io/MYF-Eldora/">Master Your Fate: Eldora</a><br><br>
 🛠️ Built With
 <p> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> </p>
 
-<ul style="list-style-type: none;">
+<ul>
 <li>✨ Current Features</li>
 <li>🎞️ Character selection slideshow</li>
 <li>👤 Male & female character selection</li>
@@ -34,7 +34,7 @@ into a playable browser-based fantasy experience.
 <li>⚡ JavaScript DOM manipulation</li>
 <li>📱 Responsive layout foundations</li>
 <li>🎮 Interactive character creation screen</li>
-</ul>
+</ul><br>
 
 🚀 Planned Features
 
