@@ -31,21 +31,7 @@ into a playable browser-based fantasy experience.
 ⚡ JavaScript DOM manipulation
 📱 Responsive layout foundations
 🎮 Interactive character creation screen
-📂 Project Structure
-MYF-Eldora/
-│
-├── index.html
-├── css/
-│   └── style-myfrpg.css
-├── js/
-│   └── script-myfrpg.js
-├── img/
-│   ├── warrior-male.png
-│   ├── warrior-female.png
-│   ├── rogue-male.png
-│   ├── rogue-female.png
-│   └── etc...
-└── README.md
+
 🚀 Planned Features
 
 Future systems planned for development:
