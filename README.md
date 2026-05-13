@@ -8,14 +8,14 @@ This project is part of the larger Master Your Fate Universe — a growing fanta
 
 The goal of this project is to combine:<br>
 
-<ul>
+<ul list-style-type="none">
 <li>⚔️ RPG mechanics</li>
 <li>🧙 Fantasy storytelling</li>
 <li>🎮 Interactive gameplay systems</li>
 <li>🖼️ Dynamic UI/UX</li>
 <li>🌍 Immersive worldbuilding</li>
 <li>⚡ JavaScript-powered game logic</li>
-</ul><br>
+</ul>
 into a playable browser-based fantasy experience.
 
 🎮 Live Demo
@@ -23,15 +23,18 @@ into a playable browser-based fantasy experience.
 🌐 <a href="https://xtedax.github.io/MYF-Eldora/">Master Your Fate: Eldora</a>
 🛠️ Built With
 <p> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> </p>
-✨ Current Features
-🎞️ Character selection slideshow
-👤 Male & female character selection
-🧙 Multiple fantasy classes
-🖼️ Dynamic character image switching
-🎨 Fantasy-inspired UI
-⚡ JavaScript DOM manipulation
-📱 Responsive layout foundations
-🎮 Interactive character creation screen
+
+<ul list-style-type="none">
+<li>✨ Current Features</li>
+<li>🎞️ Character selection slideshow</li>
+<li>👤 Male & female character selection</li>
+<li>🧙 Multiple fantasy classes</li>
+<li>🖼️ Dynamic character image switching</li>
+<li>🎨 Fantasy-inspired UI</li>
+<li>⚡ JavaScript DOM manipulation</li>
+<li>📱 Responsive layout foundations</li>
+<li>🎮 Interactive character creation screen</li>
+</ul>
 
 🚀 Planned Features
 
@@ -49,8 +52,6 @@ Future systems planned for development:
 🎵 Music & ambient audio
 🌌 Expanded lore integration
 📸 Screenshots
-
-Gameplay previews and development screenshots coming soon.
 
 🧠 What I'm Learning Through This Project
 
