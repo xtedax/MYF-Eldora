@@ -96,5 +96,5 @@ All original concepts, lore, systems, designs, and assets belong to the creator.
   
 <h2>🔗 Links</h2><br>
 🌐 Live Project: <a href="https://xtedax.github.io/MYF-Eldora/">MYF: Eldora</a><br>
-💻 GitHub Repo: <a href="https://github.com/xtedax/MYF-Eldora">github.com/xtedax/MYF-Eldora</a><br>
+💻 GitHub Repo: <a href="https://github.com/xtedax/MYF-Eldora">github.com/xtedax/MYF-Eldora</a><br><br><br>
 <p align="center"> <i>"Every legend begins with a choice."</i> </p> 
