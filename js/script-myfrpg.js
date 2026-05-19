@@ -163,6 +163,7 @@ window.addEventListener("load", () => {
 // =========================================================================== //
 
 
+// ==================== GALLERY ITEM POPULATION - - CHOOSE RACE PAGE ========================== //
 galleryItems.forEach(item => {
 
   const raceKey = item.dataset.race;
@@ -170,33 +171,21 @@ galleryItems.forEach(item => {
 
   if (!raceData) return;
 
-  // =========================
-  // IMAGES
-  // =========================
-
+  // Image population
   const images = item.querySelectorAll("img");
 
   images[0].src = raceData.image1;
   images[1].src = raceData.image2;
 
-  // =========================
-  // NAME
-  // =========================
-
+  // Name population
   item.querySelector(".image-name").textContent =
     raceData.name;
 
-  // =========================
-  // DESCRIPTION
-  // =========================
-
+  // Description population
   item.querySelector(".describe-main").innerHTML =
     `<p>${raceData.description}</p>`;
 
-  // =========================
-  // RACIAL BONUSES
-  // =========================
-
+  // Racial bonuses population
   let bonusesHTML = "";
 
   for (const bonusKey in raceData.racialBonuses) {
@@ -217,7 +206,7 @@ galleryItems.forEach(item => {
 
 });
 
-
+// ================================ PAGE LOADING EFFECT ====================================== //
 
 
 // ======================== GALLERY CLICK TEXT EFFECT - CHOOSE RACE PAGE ======================== //
