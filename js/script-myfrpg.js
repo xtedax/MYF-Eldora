@@ -17,7 +17,7 @@ const playerChoices = {};
 const races = {
   human: {
     name: "Human",
-    description: "Born from the ashes of the Age of Iron, humans rebuilt their fractured world through sheer determination and adaptability. They are builders, conquerors, and dreamers — ever reaching beyond their limits to carve meaning from a fleeting existence. Their kingdoms thrive on ambition and faith, driven by a desire to leave a mark upon history before time claims them. Versatile and resourceful, humans excel at strategy and cooperation, though their pride and impatience often spark conflict. On the battlefield, they favor unity and discipline, combining steel, spell, and strategy in equal measure.",
+    description: "Arrivals to Eldora rather than its originators, humans are defined by their resilience, adaptability, and relentless drive to find purpose in the unknown. They are builders, leaders, and dreamers—quick to shape the world around them, even when it is not their own. Their kingdoms rise from ambition and belief, fueled by a desire to endure, to belong, and to leave a lasting mark in a land that once stood beyond their reach. Versatile and resourceful, humans excel at strategy and cooperation, though their pride and impatience often place them at odds with both allies and rivals. Yet it is this same drive that has allowed them to stand alongside others in moments that demanded unity and resolve. In times when the fate of the world hung uncertain, humans proved capable not only of ambition, but of courage, sacrifice, and shared purpose—becoming a people not just defined by what they seek, but by what they choose to protect.",
     image1: "img/human-kingdom.png",
     image2: "img/human-battle.png",
     racialBonuses: {
@@ -154,13 +154,70 @@ const centerText = document.querySelector('.centerText');
 // ================================================================== //
 
 
-// ======================== PAGE LOADING EFFECT ======================== //
+// ======================== PAGE LOADING EFFECT ============================== //
 // This script adds a "loaded" class to the body element once the page has fully loaded, triggering a fade-in effect defined in CSS. The body starts with an opacity of 0, and when the "loaded" class is added, it transitions to full opacity over 0.3 seconds, creating a smooth fade-in effect for the entire page content.
 
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
 // =========================================================================== //
+
+
+galleryItems.forEach(item => {
+
+  const raceKey = item.dataset.race;
+  const raceData = races[raceKey];
+
+  if (!raceData) return;
+
+  // =========================
+  // IMAGES
+  // =========================
+
+  const images = item.querySelectorAll("img");
+
+  images[0].src = raceData.image1;
+  images[1].src = raceData.image2;
+
+  // =========================
+  // NAME
+  // =========================
+
+  item.querySelector(".image-name").textContent =
+    raceData.name;
+
+  // =========================
+  // DESCRIPTION
+  // =========================
+
+  item.querySelector(".describe-main").innerHTML =
+    `<p>${raceData.description}</p>`;
+
+  // =========================
+  // RACIAL BONUSES
+  // =========================
+
+  let bonusesHTML = "";
+
+  for (const bonusKey in raceData.racialBonuses) {
+
+    const bonus =
+      raceData.racialBonuses[bonusKey];
+
+    bonusesHTML += `
+      <span class='racials'>
+        <strong>${bonus.name}:</strong>
+      </span>
+      ${bonus.description}<br>
+    `;
+  }
+
+  item.querySelector(".describe-extra").innerHTML =
+    bonusesHTML;
+
+});
+
+
 
 
 // ======================== GALLERY CLICK TEXT EFFECT - CHOOSE RACE PAGE ======================== //
