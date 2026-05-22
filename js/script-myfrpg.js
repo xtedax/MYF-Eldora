@@ -14,58 +14,83 @@ let selectedGender = "male";
 let selectedRace = "human";
 
 const playerChoices = {};
+
 const races = {
   human: {
     name: "Human",
     description: "Arrivals to Eldora rather than its originators, humans are defined by their resilience, adaptability, and relentless drive to find purpose in the unknown. They are builders, leaders, and dreamers—quick to shape the world around them, even when it is not their own. Their kingdoms rise from ambition and belief, fueled by a desire to endure, to belong, and to leave a lasting mark in a land that once stood beyond their reach. Versatile and resourceful, humans excel at strategy and cooperation, though their pride and impatience often place them at odds with both allies and rivals. Yet it is this same drive that has allowed them to stand alongside others in moments that demanded unity and resolve. In times when the fate of the world hung uncertain, humans proved capable not only of ambition, but of courage, sacrifice, and shared purpose—becoming a people not just defined by what they seek, but by what they choose to protect.",
-    image1: "img/human-kingdom.png",
-    image2: "img/human-battle.png",
+    raceImage1: "img/human-kingdom.png",
+    raceImage2: "img/human-battle.png",
+    raceImage3: "img/human-battle.png",
     racialBonuses: {
-      adaptivePotential: {
+      bonus1: {
         name: "Adaptive Potential",
-        description: "+1 to chosen attribute or proficiency"
+        description: "+1 to chosen attribute"
       },
-      secondWind: {
+      bonus2: {
         name: "Second Wind",
-        description: "Once per encounter, recover 10% HP or Stamina when dropping below 50% HP"
+        description: "Once per encounter, recover 20% HP and Stamina when dropping below 80% HP"
       },
-      versatile: {
-        name: "Versatile",
-        description: "+10% EXP gain to Talents and Weapon Mastery"
+      bonus3: {
+        name: "Fast Learner",
+        description: "+10% XP gain to chosen proficiency"
+      }
+    }
+  },
+
+  elf: {
+    name: "Elf",
+    description: "The Elves were the first to awaken beneath the starlit boughs of Eldora, their spirits intertwined with the rhythm of nature and the flow of magic.Graceful, ancient, and contemplative, they craft living cities and art that endure for millennia.Their wisdom is matched only by their melancholy, for long life teaches both wonder and sorrow.Elves revere balance and consequence, believing every action ripples through eternity.In war, they move like whispers of wind and light — precise, silent, and devastating — favoring archery, magic, and misdirection over brute force.",
+    raceImage1: "img/elf-kingdom.png",
+    raceImage2: "img/elf-battle.png",
+    raceImage3: "img/elf-battle.png",
+    racialBonuses: {
+      eldertideGrace: {
+        name: "Eldertide Grace",
+        description: "+2 DEX or +2 WIS"
+      },
+      ancientBlessing: {
+        name: "Ancient Blessing",
+        description: "Adds a d6 saving throw to any chosen attribute"
+      },
+      keenSenses: {
+        name: "Keen Senses",
+        description: "Automatically detect hidden traps, weak illusions, or movement in fog/dark rooms"
       }
     },
-    startingzones: {
-      kolDragar: {
-        name: "Kol Dragar",
-        description: "Kol Dragar stands upon unforgiving heights, where stone and steel define both land and people. Those who begin here learn quickly—endure, adapt, or be broken. Few paths are easy in Kol Dragar… but those who survive its trials are not easily shaken.",
-        image: "img/kol-dragar.png",
-        zoneBonuses: {
-          chillOfKolDragar: {
-            name: "Chill of Kol Dragar",
-            description: "Increased resistance to cold damage and frost effects"
-          }
+  },
+
+  factions: {
+    kolDragar: {
+      name: "Kol Dragar",
+      description: "Kol Dragar stands upon unforgiving heights, where stone and steel define both land and people. Those who begin here learn quickly—endure, adapt, or be broken. Few paths are easy in Kol Dragar… but those who survive its trials are not easily shaken.",
+      image: "img/kol-dragar.png",
+      zoneBonuses: {
+        chillOfKolDragar: {
+          name: "Chill of Kol Dragar",
+          description: "Increased resistance to cold damage and frost effects"
         }
-      },
-      valenreach: {
-        name: "Valenreach",
-        description: "Valenreach stands as a realm of power and prestige, where noble houses rise above all and influence shapes the fate of many. Its banners stretch far beyond its borders, and its people carry themselves with a confidence—some would say arrogance—earned through conquest and command. To begin in Valenreach is to stand among those who believe the world is theirs to claim.",
-        image: "img/valenreach.png",
-        zoneBonuses: {
-          noblePrivilege: {
-            name: "Noble Privilege",
-            description: "+5% Better Buy/Sell Prices, +5% Better Outcome on NPC Interactions"
-          }
+      }
+    },
+    valenreach: {
+      name: "Valenreach",
+      description: "Valenreach stands as a realm of power and prestige, where noble houses rise above all and influence shapes the fate of many. Its banners stretch far beyond its borders, and its people carry themselves with a confidence—some would say arrogance—earned through conquest and command. To begin in Valenreach is to stand among those who believe the world is theirs to claim.",
+      image: "img/valenreach.png",
+      zoneBonuses: {
+        noblePrivilege: {
+          name: "Noble Privilege",
+          description: "+5% Better Buy/Sell Prices, +5% Better Outcome on NPC Interactions"
         }
-      },
-      luminaria: {
-        name: "Luminaria",
-        description: "Luminaria is a realm of quiet brilliance, where knowledge is treasured above all and understanding is the greatest power. Its libraries hold secrets that have been guarded for centuries, and its scholars are sought after for their wisdom and insight. Those who begin here are drawn toward discovery—of the world, of hidden truths, and of forces unseen.",
-        image: "img/luminaria.png",
-        zoneBonuses: {
-          insightfulMind: {
-            name: "Insightful Mind",
-            description: "+5% Experience Gain, +5% Increased Success in Perception and Investigation Checks"
-          }
+      }
+    },
+    luminaria: {
+      name: "Luminaria",
+      description: "Luminaria is a realm of quiet brilliance, where knowledge is treasured above all and understanding is the greatest power. Its libraries hold secrets that have been guarded for centuries, and its scholars are sought after for their wisdom and insight. Those who begin here are drawn toward discovery—of the world, of hidden truths, and of forces unseen.",
+      image: "img/luminaria.png",
+      zoneBonuses: {
+        insightfulMind: {
+          name: "Insightful Mind",
+          description: "+5% Experience Gain, +5% Increased Success in Perception and Investigation Checks"
         }
       }
     }
@@ -73,8 +98,9 @@ const races = {
   elf: {
     name: "Elf",
     description: "The Elves were the first to awaken beneath the starlit boughs of Eldora, their spirits intertwined with the rhythm of nature and the flow of magic.Graceful, ancient, and contemplative, they craft living cities and art that endure for millennia.Their wisdom is matched only by their melancholy, for long life teaches both wonder and sorrow.Elves revere balance and consequence, believing every action ripples through eternity.In war, they move like whispers of wind and light — precise, silent, and devastating — favoring archery, magic, and misdirection over brute force.",
-    image1: "img/elf-kingdom.png",
-    image2: "img/elf-battle.png",
+    raceImage1: "img/elf-kingdom.png",
+    raceImage2: "img/elf-battle.png",
+    raceImage3: "img/elf-battle.png",
     racialBonuses: {
       eldertideGrace: {
         name: "Eldertide Grace",
@@ -129,6 +155,30 @@ const races = {
   },
 };
 
+const factions = {
+  kolDragar: {
+    name: "Kol Dragar",
+    description: "Kol Dragar stands upon unforgiving heights, where stone and steel define both land and people. Those who begin here learn quickly—endure, adapt, or be broken. Few paths are easy in Kol Dragar… but those who survive its trials are not easily shaken.",
+    factionImage: "img/kol-dragar.png",
+    factionBonus: "Chill of Kol Dragar",
+    bonusDescription: "+10% Cold Resistance, +5% Stamina Regeneration"
+  },
+  valenreach: {
+    name: "Valenreach",
+    description: "Valenreach stands as a realm of power and prestige, where noble houses rise above all and influence shapes the fate of many. Its banners stretch far beyond its borders, and its people carry themselves with a confidence—some would say arrogance—earned through conquest and command. To begin in Valenreach is to stand among those who believe the world is theirs to claim.",
+    factionImage: "img/valenreach.png",
+    factionBonus: "Noble Privilege",
+    bonusDescription: "+5% Better Buy/Sell Prices, +5% Better Outcome on NPC Interactions"
+  },
+  luminaria: {
+    name: "Luminaria",
+    description: "Luminaria is a realm of quiet brilliance, where knowledge is treasured above all and understanding is the greatest power. Its libraries hold secrets that have been guarded for centuries, and its scholars are sought after for their wisdom and insight. Those who begin here are drawn toward discovery—of the world, of hidden truths, and of forces unseen.",
+    factionImage: "img/luminaria.png",
+    factionBonus: "Insightful Mind",
+    bonusDescription: "+5% Experience Gain, +5% Increased Success in Perception and Investigation Checks"
+  }
+};
+
 
 const racialBonuses = {};
 const startingZones = {};
@@ -163,7 +213,7 @@ window.addEventListener("load", () => {
 // =========================================================================== //
 
 
-// ==================== GALLERY ITEM POPULATION - - CHOOSE RACE PAGE ========================== //
+// ==================== GALLERY ITEM POPULATION - CHOOSE RACE PAGE ========================== //
 galleryItems.forEach(item => {
 
   const raceKey = item.dataset.race;
@@ -174,8 +224,9 @@ galleryItems.forEach(item => {
   // Image population
   const images = item.querySelectorAll("img");
 
-  images[0].src = raceData.image1;
-  images[1].src = raceData.image2;
+  images[0].src = raceData.raceImage1;
+  images[1].src = raceData.raceImage2;
+  images[2].src = raceData.raceImage3;
 
   // Name population
   item.querySelector(".image-name").textContent =
@@ -206,7 +257,38 @@ galleryItems.forEach(item => {
 
 });
 
-// ================================ PAGE LOADING EFFECT ====================================== //
+// ========================================================================================== //
+
+
+// ==================== GALLERY ITEM POPULATION - SELECTED RACE PAGE ========================== //
+galleryItems.forEach(item => {
+
+  const factionKey = item.dataset.faction;
+  const factionData = factions[factionKey];
+
+  if (!factionData) return;
+
+  // Image population
+  const images = item.querySelectorAll("img");
+
+  images[0].src = factionData.factionImage;
+
+
+  // Name population
+  item.querySelector(".image-name").textContent =
+    factionData.name;
+
+  // Description population
+  item.querySelector(".describe-main2").innerHTML =
+    `<p>${factionData.description}</p>`;
+
+  // Faction bonuses population
+  item.querySelector(".describe-extra2").innerHTML =
+    `<p>${factionData.bonusDescription}</p>`;
+
+});
+
+// ========================================================================================== //
 
 
 // ======================== GALLERY CLICK TEXT EFFECT - CHOOSE RACE PAGE ======================== //
