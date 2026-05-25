@@ -85,9 +85,9 @@ const races = {
   hearthkin: {
     name: "Hearthkin",
     description: "Once nomads of the open plains, Hearthkin now dwell in quiet villages where laughter and warmth define their days. They live simply yet deeply, finding joy in family, good harvests, and stories shared by the hearth. Though small in stature, their courage runs deep — born from generations of surviving in the shadows of greater powers. Their belief in hearth spirits and humble virtues gives them strength unseen. On the battlefield, they rely on wit and agility, striking from cover or laying clever traps, proving that heart often outweighs might.",
-    raceImage1: "img/dwarf-kingdom.png",
-    raceImage2: "img/dwarf-battle.png",
-    raceImage3: "img/dwarf-battle.png",
+    raceImage1: "img/hearthkin-kingdom.png",
+    raceImage2: "img/hearthkin-battle.png",
+    raceImage3: "img/hearthkin-battle.png",
     racialBonuses: {
       bonus1: {
         name: "Quick Witted",
@@ -102,27 +102,26 @@ const races = {
         description: "+15% to dodge and stealth"
       }
     },
-
-    catlans: {
-      name: "Catlans",
-      description: "Descendants of a distant and unknown origin, the Catlans blend instinct, grace, and intellect in equal measure. Displaced and unrooted, they move through the world as hunters, wanderers, and quiet observers—guided less by law and more by intuition and experience. Their communities are bound by trust and shared understanding rather than rigid structure, valuing awareness of both self and surroundings above all else. Some speak of a guiding presence in the night sky, not as a god, but as something felt rather than known—an instinctive pull that shapes their path. In battle, Catlans are swift and unpredictable, moving like shifting shadows—striking with precision before vanishing from reach.",
-      raceImage1: "img/catlan-kingdom.png",
-      raceImage2: "img/catlan-battle.png",
-      raceImage3: "img/catlan-battle.png",
-      racialBonuses: {
-        bonus1: {
-          name: "Feral",
-          description: "+2 STR or +2 DEX"
-        },
-        bonus2: {
-          name: "Pounce",
-          description: "Leap attack that spans 2 distance modifiers, deals 25% of attack damage, and 50% chance to stagger enemies"
-        },
-        bonus3: {
-          name: "Night Vision",
-          description: "Can see clearly in low-light and partial darkness"
-        }
+  },
+  catlan: {
+    name: "Catlans",
+    description: "Descendants of a distant and unknown origin, the Catlans blend instinct, grace, and intellect in equal measure. Displaced and unrooted, they move through the world as hunters, wanderers, and quiet observers—guided less by law and more by intuition and experience. Their communities are bound by trust and shared understanding rather than rigid structure, valuing awareness of both self and surroundings above all else. Some speak of a guiding presence in the night sky, not as a god, but as something felt rather than known—an instinctive pull that shapes their path. In battle, Catlans are swift and unpredictable, moving like shifting shadows—striking with precision before vanishing from reach.",
+    raceImage1: "img/catlan-kingdom.png",
+    raceImage2: "img/catlan-battle.png",
+    raceImage3: "img/catlan-battle.png",
+    racialBonuses: {
+      bonus1: {
+        name: "Feral",
+        description: "+2 STR or +2 DEX"
       },
+      bonus2: {
+        name: "Pounce",
+        description: "Leap attack that spans 2 distance modifiers, deals 25% of attack damage, and 50% chance to stagger enemies"
+      },
+      bonus3: {
+        name: "Night Vision",
+        description: "Can see clearly in low-light and partial darkness"
+      }
     },
   },
 };
