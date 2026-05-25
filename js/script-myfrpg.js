@@ -104,7 +104,7 @@ const races = {
     },
   },
   catlan: {
-    name: "Catlans",
+    name: "Catlan",
     description: "Descendants of a distant and unknown origin, the Catlans blend instinct, grace, and intellect in equal measure. Displaced and unrooted, they move through the world as hunters, wanderers, and quiet observers—guided less by law and more by intuition and experience. Their communities are bound by trust and shared understanding rather than rigid structure, valuing awareness of both self and surroundings above all else. Some speak of a guiding presence in the night sky, not as a god, but as something felt rather than known—an instinctive pull that shapes their path. In battle, Catlans are swift and unpredictable, moving like shifting shadows—striking with precision before vanishing from reach.",
     raceImage1: "img/catlan-kingdom.png",
     raceImage2: "img/catlan-battle.png",
@@ -148,6 +148,27 @@ const factions = {
     factionImage: "img/luminaria.png",
     factionBonus: "Insightful Mind",
     bonusDescription: "+5% Experience Gain, +5% Increased Success in Perception and Investigation Checks"
+  },
+  sylvaeriel: {
+    name: "Sylvaeriel",
+    description: "Bound to the living forests of Eldora, the Sylvaeriel embody growth, renewal, and the natural cycle of life They favor patience, precision, and harmony, moving with the rhythm of the wild. To them, balance is found in the cycle—where all things grow, fade, and return in time.",
+    factionImage: "img/sylvaeriel.png",
+    factionBonus: "Verdant Vitality",
+    bonusDescription: "+5% Health Regeneration, +5% Healing Receivedn"
+  },
+  alumenouans: {
+    name: "Alumenouans",
+    description: "Attuned to the arcane currents of Eldora, the Alumenouans embody knowledge, precision, and mastery. They favor intellect and control, shaping magic with deliberate intent, their power waxing and waning with the rhythm of lunar cycles. To them, balance is found in understanding—where power is studied, refined, and wielded with purpose.",
+    factionImage: "img/alumenouans.png",
+    factionBonus: "Arcane Attunement",
+    bonusDescription: "+5% Mana Regeneration, +5% Spell Effectiveness"
+  },
+  thalorien: {
+    name: "Thalorien",
+    description: "Shaped by water and motion, the Thalorien embody adaptability and flow. They favor agility and intuition, moving like currents—fluid and ever- changing. Where other elves find balance in harmony or natural cycles, Thaloriens believe it is found in constant motion, adapting to the world as it shifts.",
+    factionImage: "img/thalorien.png",
+    factionBonus: "Grace of the TideBorne",
+    bonusDescription: "+50% Breathing Capacity and +20% Movement Speed Underwater, +5% Dodge and Evasion Chance<br>"
   }
 };
 
