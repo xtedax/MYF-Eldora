@@ -45,115 +45,88 @@ const races = {
     raceImage2: "img/elf-battle.png",
     raceImage3: "img/elf-battle.png",
     racialBonuses: {
-      eldertideGrace: {
+      bonus1: {
         name: "Eldertide Grace",
         description: "+2 DEX or +2 WIS"
       },
-      ancientBlessing: {
+      bonus2: {
         name: "Ancient Blessing",
-        description: "Adds a d6 saving throw to any chosen attribute"
+        description: "Once per encounter, add a d6 saving throw to any proficiency check"
       },
-      keenSenses: {
+      bonus3: {
         name: "Keen Senses",
-        description: "Automatically detect hidden traps, weak illusions, or movement in fog/dark rooms"
+        description: "+75% Chance to detect hidden traps, weak illusions, or movement in foggy areas or dark rooms"
       }
     },
   },
 
-  factions: {
-    kolDragar: {
-      name: "Kol Dragar",
-      description: "Kol Dragar stands upon unforgiving heights, where stone and steel define both land and people. Those who begin here learn quickly—endure, adapt, or be broken. Few paths are easy in Kol Dragar… but those who survive its trials are not easily shaken.",
-      image: "img/kol-dragar.png",
-      zoneBonuses: {
-        chillOfKolDragar: {
-          name: "Chill of Kol Dragar",
-          description: "Increased resistance to cold damage and frost effects"
-        }
-      }
-    },
-    valenreach: {
-      name: "Valenreach",
-      description: "Valenreach stands as a realm of power and prestige, where noble houses rise above all and influence shapes the fate of many. Its banners stretch far beyond its borders, and its people carry themselves with a confidence—some would say arrogance—earned through conquest and command. To begin in Valenreach is to stand among those who believe the world is theirs to claim.",
-      image: "img/valenreach.png",
-      zoneBonuses: {
-        noblePrivilege: {
-          name: "Noble Privilege",
-          description: "+5% Better Buy/Sell Prices, +5% Better Outcome on NPC Interactions"
-        }
-      }
-    },
-    luminaria: {
-      name: "Luminaria",
-      description: "Luminaria is a realm of quiet brilliance, where knowledge is treasured above all and understanding is the greatest power. Its libraries hold secrets that have been guarded for centuries, and its scholars are sought after for their wisdom and insight. Those who begin here are drawn toward discovery—of the world, of hidden truths, and of forces unseen.",
-      image: "img/luminaria.png",
-      zoneBonuses: {
-        insightfulMind: {
-          name: "Insightful Mind",
-          description: "+5% Experience Gain, +5% Increased Success in Perception and Investigation Checks"
-        }
-      }
-    }
-  },
-  elf: {
-    name: "Elf",
-    description: "The Elves were the first to awaken beneath the starlit boughs of Eldora, their spirits intertwined with the rhythm of nature and the flow of magic.Graceful, ancient, and contemplative, they craft living cities and art that endure for millennia.Their wisdom is matched only by their melancholy, for long life teaches both wonder and sorrow.Elves revere balance and consequence, believing every action ripples through eternity.In war, they move like whispers of wind and light — precise, silent, and devastating — favoring archery, magic, and misdirection over brute force.",
-    raceImage1: "img/elf-kingdom.png",
-    raceImage2: "img/elf-battle.png",
-    raceImage3: "img/elf-battle.png",
+  dwarf: {
+    name: "Dwarf",
+    description: "Forged in the deep places of the world, Dwarves are children of stone and flame. Their subterranean halls echo with the songs of forges and the oaths of kin. Honor, craftsmanship, and loyalty define their way of life, and their creations — be they weapons or monuments — endure as testaments to their pride. Their resilience is legendary, but their stubbornness can harden into isolation. They worship the Great Forge, believing each soul to be a spark struck from its divine fire. In battle, they are immovable, fighting with disciplined formations, unmatched craftsmanship, and an unyielding will.",
+    raceImage1: "img/dwarf-kingdom.png",
+    raceImage2: "img/dwarf-battle.png",
+    raceImage3: "img/dwarf-battle.png",
     racialBonuses: {
-      eldertideGrace: {
-        name: "Eldertide Grace",
-        description: "+2 DEX or +2 WIS"
+      bonus1: {
+        name: "Stoneborn Fortitude",
+        description: "+2 CON"
       },
-      ancientBlessing: {
-        name: "Ancient Blessing",
-        description: "Adds a d6 saving throw to any chosen attribute"
+      bonus2: {
+        name: "Stoneblood",
+        description: "Temporarily reduce all damage taken by 20% and 50% resistance to knockback or stagger for 5 seconds"
       },
-      keenSenses: {
-        name: "Keen Senses",
-        description: "Automatically detect hidden traps, weak illusions, or movement in fog/dark rooms"
+      bonus3: {
+        name: "Iron Grip",
+        description: "-75% Chance to be disarmed or slip when hanging on ledges, vines, cliffs, ropes or enemy limbs"
+      }
+    },
+  },
+
+  hearthkin: {
+    name: "Hearthkin",
+    description: "Once nomads of the open plains, Hearthkin now dwell in quiet villages where laughter and warmth define their days. They live simply yet deeply, finding joy in family, good harvests, and stories shared by the hearth. Though small in stature, their courage runs deep — born from generations of surviving in the shadows of greater powers. Their belief in hearth spirits and humble virtues gives them strength unseen. On the battlefield, they rely on wit and agility, striking from cover or laying clever traps, proving that heart often outweighs might.",
+    raceImage1: "img/dwarf-kingdom.png",
+    raceImage2: "img/dwarf-battle.png",
+    raceImage3: "img/dwarf-battle.png",
+    racialBonuses: {
+      bonus1: {
+        name: "Quick Witted",
+        description: "+2 DEX or +2 INT"
+      },
+      bonus2: {
+        name: "Fortunate Twist",
+        description: "Once per encounter, turn a failed roll into a partial success"
+      },
+      bonus3: {
+        name: "Nimblefoot",
+        description: "+15% to dodge and stealth"
       }
     },
 
-    // NO STARTING ZONES FOR ELVES YET - WILL WORK ON THIS AFTER TESTING HUMANS
-    startingzones: {
-      kolDragar: {
-        name: "Kol Dragar",
-        description: "Kol Dragar stands upon unforgiving heights, where stone and steel define both land and people. Those who begin here learn quickly—endure, adapt, or be broken. Few paths are easy in Kol Dragar… but those who survive its trials are not easily shaken.",
-        image: "img/kol-dragar.png",
-        zoneBonuses: {
-          chillOfKolDragar: {
-            name: "Chill of Kol Dragar",
-            description: "Increased resistance to cold damage and frost effects"
-          }
+    catlans: {
+      name: "Catlans",
+      description: "Descendants of a distant and unknown origin, the Catlans blend instinct, grace, and intellect in equal measure. Displaced and unrooted, they move through the world as hunters, wanderers, and quiet observers—guided less by law and more by intuition and experience. Their communities are bound by trust and shared understanding rather than rigid structure, valuing awareness of both self and surroundings above all else. Some speak of a guiding presence in the night sky, not as a god, but as something felt rather than known—an instinctive pull that shapes their path. In battle, Catlans are swift and unpredictable, moving like shifting shadows—striking with precision before vanishing from reach.",
+      raceImage1: "img/catlan-kingdom.png",
+      raceImage2: "img/catlan-battle.png",
+      raceImage3: "img/catlan-battle.png",
+      racialBonuses: {
+        bonus1: {
+          name: "Feral",
+          description: "+2 STR or +2 DEX"
+        },
+        bonus2: {
+          name: "Pounce",
+          description: "Leap attack that spans 2 distance modifiers, deals 25% of attack damage, and 50% chance to stagger enemies"
+        },
+        bonus3: {
+          name: "Night Vision",
+          description: "Can see clearly in low-light and partial darkness"
         }
       },
-      valenreach: {
-        name: "Valenreach",
-        description: "Valenreach stands as a realm of power and prestige, where noble houses rise above all and influence shapes the fate of many. Its banners stretch far beyond its borders, and its people carry themselves with a confidence—some would say arrogance—earned through conquest and command. To begin in Valenreach is to stand among those who believe the world is theirs to claim.",
-        image: "img/valenreach.png",
-        zoneBonuses: {
-          noblePrivilege: {
-            name: "Noble Privilege",
-            description: "+5% Better Buy/Sell Prices, +5% Better Outcome on NPC Interactions"
-          }
-        }
-      },
-      luminaria: {
-        name: "Luminaria",
-        description: "Luminaria is a realm of quiet brilliance, where knowledge is treasured above all and understanding is the greatest power. Its libraries hold secrets that have been guarded for centuries, and its scholars are sought after for their wisdom and insight. Those who begin here are drawn toward discovery—of the world, of hidden truths, and of forces unseen.",
-        image: "img/luminaria.png",
-        zoneBonuses: {
-          insightfulMind: {
-            name: "Insightful Mind",
-            description: "+5% Experience Gain, +5% Increased Success in Perception and Investigation Checks"
-          }
-        }
-      }
-    }
+    },
   },
 };
+
 
 const factions = {
   kolDragar: {
