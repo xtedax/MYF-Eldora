@@ -169,6 +169,27 @@ const factions = {
     factionImage: "img/thalorien.png",
     factionBonus: "Grace of the TideBorne",
     bonusDescription: "+50% Breathing Capacity and +20% Movement Speed Underwater, +5% Dodge and Evasion Chance<br>"
+  },
+  sylvaeriel: {
+    name: "Sylvaeriel",
+    description: "Bound to the living forests of Eldora, the Sylvaeriel embody growth, renewal, and the natural cycle of life They favor patience, precision, and harmony, moving with the rhythm of the wild. To them, balance is found in the cycle—where all things grow, fade, and return in time.",
+    factionImage: "img/sylvaeriel.png",
+    factionBonus: "Verdant Vitality",
+    bonusDescription: "+5% Health Regeneration, +5% Healing Receivedn"
+  },
+  alumenouans: {
+    name: "Alumenouans",
+    description: "Attuned to the arcane currents of Eldora, the Alumenouans embody knowledge, precision, and mastery. They favor intellect and control, shaping magic with deliberate intent, their power waxing and waning with the rhythm of lunar cycles. To them, balance is found in understanding—where power is studied, refined, and wielded with purpose.",
+    factionImage: "img/alumenouans.png",
+    factionBonus: "Arcane Attunement",
+    bonusDescription: "+5% Mana Regeneration, +5% Spell Effectiveness"
+  },
+  thalorien: {
+    name: "Thalorien",
+    description: "Shaped by water and motion, the Thalorien embody adaptability and flow. They favor agility and intuition, moving like currents—fluid and ever- changing. Where other elves find balance in harmony or natural cycles, Thaloriens believe it is found in constant motion, adapting to the world as it shifts.",
+    factionImage: "img/thalorien.png",
+    factionBonus: "Grace of the TideBorne",
+    bonusDescription: "+50% Breathing Capacity and +20% Movement Speed Underwater, +5% Dodge and Evasion Chance<br>"
   }
 };
 
