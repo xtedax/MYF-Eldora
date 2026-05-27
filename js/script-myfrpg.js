@@ -190,6 +190,55 @@ const factions = {
     factionImage: "img/havengrim.png",
     factionBonus: "Wind and Thunder",
     bonusDescription: "+5% Attack/Cast Speed, +5% Dodge and Evasion Chance"
+  },
+  bramblestead: {
+    name: "Bramblestead",
+    description: "The Bramblestead are known for their tireless work ethic and deep-rooted connection to the land. They build, cultivate, and endure—finding pride in the simple act of creating a life that lasts. To them, a strong home is not given, but made through patience, effort, and care.",
+    factionImage: "img/bramblestead.png",
+    factionBonus: "Hearthbound Tenacity",
+    bonusDescription: "+5% Damage Reduction when below 50% HP, +5% Stamina Regeneration"
+  },
+  alderwyn: {
+    name: "Alderwyn",
+    description: "The Alderwyn carry themselves with quiet dignity, guided by tradition, responsibility, and a strong sense of duty. They are often looked to as leaders—not by claim, but by the trust they inspire in others. For them, honor is not a title, but a commitment to uphold what binds their people together.",
+    factionImage: "img/alderwyn.png",
+    factionBonus: "Composed and Measured",
+    bonusDescription: "+5% Reduction to Fear and Disruption Effects, +5% Critical Hit Chance"
+  },
+  merryvale: {
+    name: "Merryvale",
+    description: "The Merryvale embrace life with warmth, curiosity, and an unshaken sense of joy. They find meaning not in what is built or preserved, but in the moments shared and the experiences lived. Even in uncertain times, they remain a reminder that lightness of heart can be its own kind of strength.",
+    factionImage: "img/merryvale.png",
+    factionBonus: "Lighthearted",
+    bonusDescription: "+5% Movement Speed, +5% Buffs and Positive Effects Duration"
+  },
+  havengrim: {
+    name: "Havengrim",
+    description: "Unbound by the past, the Havengrim rise to shape their own future among the skies. Through innovation and ambition, they build what others believe impossible. To them, freedom is not given—it is forged, carried on wind and will.",
+    factionImage: "img/havengrim.png",
+    factionBonus: "Wind and Thunder",
+    bonusDescription: "+5% Attack/Cast Speed, +5% Dodge and Evasion Chance"
+  },
+  kharathi: {
+    name: "Kharathi",
+    description: "The Kharathi make their home in mountains and highlands, where strength, balance, and endurance are constantly tested. They stand firm where others falter, mastering terrain that demands control and discipline. To them, the hunt is not fleeting—it is a test of who can outlast the other.",
+    factionImage: "img/kharathi.png",
+    factionBonus: "Predatory Focus",
+    bonusDescription: "+25% Immune to Knockbacks or Stagger, +5% Stamina Regeneration"
+  },
+  savrathi: {
+    name: "Savrathi",
+    description: "The Savrathi roam the open grasslands, where survival depends on speed, awareness, and constant movement. They are quick to act, relying on sharp instincts to detect danger and opportunity from afar. To them, the hunt is not just pursuit—it is knowing when to move, and never standing still for long.",
+    factionImage: "img/savrathi.png",
+    factionBonus: "First Strike",
+    bonusDescription: "+5% Damage on First Hit against a Target, +75% Chance to Strike First"
+  },
+  nyrathi: {
+    name: "Nyrathi",
+    description: "The Nyrathi dwell within dense forests and jungles, where silence and patience are the keys to survival. They move with precision and restraint, striking only when the moment is certain. To them, the hunt is not about speed, but control—remaining unseen until it is already over.",
+    factionImage: "img/nyrathi.png",
+    factionBonus: "Primal Savagery",
+    bonusDescription: "+10% Damage when below 75% Health, +5% Critical Hit Chance"
   }
 };
 
