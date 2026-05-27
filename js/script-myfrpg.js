@@ -170,26 +170,26 @@ const factions = {
     factionBonus: "Grace of the TideBorne",
     bonusDescription: "+50% Breathing Capacity and +20% Movement Speed Underwater, +5% Dodge and Evasion Chance<br>"
   },
-  sylvaeriel: {
-    name: "Sylvaeriel",
-    description: "Bound to the living forests of Eldora, the Sylvaeriel embody growth, renewal, and the natural cycle of life They favor patience, precision, and harmony, moving with the rhythm of the wild. To them, balance is found in the cycle—where all things grow, fade, and return in time.",
-    factionImage: "img/sylvaeriel.png",
-    factionBonus: "Verdant Vitality",
-    bonusDescription: "+5% Health Regeneration, +5% Healing Receivedn"
+  durnhal: {
+    name: "Durnhal",
+    description: "Steadfast and unyielding, the Durnhal remain closest to the ancient ways of their kind. They endure with discipline and purpose, holding fast to what must never be forgotten. They are seldom heard, yet their strength preserves a legacy that refuses to fade.",
+    factionImage: "img/durnhal.png",
+    factionBonus: "Unyielding",
+    bonusDescription: "+5% Max Health, -5% Damage Taken from Damage-over-Time Effects (bleed, burn, poison)"
   },
-  alumenouans: {
-    name: "Alumenouans",
-    description: "Attuned to the arcane currents of Eldora, the Alumenouans embody knowledge, precision, and mastery. They favor intellect and control, shaping magic with deliberate intent, their power waxing and waning with the rhythm of lunar cycles. To them, balance is found in understanding—where power is studied, refined, and wielded with purpose.",
-    factionImage: "img/alumenouans.png",
-    factionBonus: "Arcane Attunement",
-    bonusDescription: "+5% Mana Regeneration, +5% Spell Effectiveness"
+  varganir: {
+    name: "Varganir",
+    description: "Wanderers without anchor, the Varganir walk paths unknown to most. They survive through adaptation and instinct, shaped by a world that never stands still. In their movement, they carry the scattered echoes of a legacy still searching for its place.",
+    factionImage: "img/varganir.png",
+    factionBonus: "Way of the Wanderer",
+    bonusDescription: "+10% Dungeon and Global Movement Speed, +5% Experience Gain"
   },
-  thalorien: {
-    name: "Thalorien",
-    description: "Shaped by water and motion, the Thalorien embody adaptability and flow. They favor agility and intuition, moving like currents—fluid and ever- changing. Where other elves find balance in harmony or natural cycles, Thaloriens believe it is found in constant motion, adapting to the world as it shifts.",
-    factionImage: "img/thalorien.png",
-    factionBonus: "Grace of the TideBorne",
-    bonusDescription: "+50% Breathing Capacity and +20% Movement Speed Underwater, +5% Dodge and Evasion Chance<br>"
+  havengrim: {
+    name: "Havengrim",
+    description: "Unbound by the past, the Havengrim rise to shape their own future among the skies. Through innovation and ambition, they build what others believe impossible. To them, freedom is not given—it is forged, carried on wind and will.",
+    factionImage: "img/havengrim.png",
+    factionBonus: "Wind and Thunder",
+    bonusDescription: "+5% Attack/Cast Speed, +5% Dodge and Evasion Chance"
   }
 };
 
