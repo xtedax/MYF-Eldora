@@ -1,124 +1,5 @@
 // ======================== GLOBAL VARIABLES ======================== //
 
-const races = {
-  human: {
-    name: "Human",
-    description: "Arrivals to Eldora rather than its originators, humans are defined by their resilience, adaptability, and relentless drive to find purpose in the unknown. They are builders, leaders, and dreamers—quick to shape the world around them, even when it is not their own. Their kingdoms rise from ambition and belief, fueled by a desire to endure, to belong, and to leave a lasting mark in a land that once stood beyond their reach. Versatile and resourceful, humans excel at strategy and cooperation, though their pride and impatience often place them at odds with both allies and rivals. Yet it is this same drive that has allowed them to stand alongside others in moments that demanded unity and resolve. In times when the fate of the world hung uncertain, humans proved capable not only of ambition, but of courage, sacrifice, and shared purpose—becoming a people not just defined by what they seek, but by what they choose to protect.",
-    raceImage1: "img/human-kingdom.png",
-    raceImage2: "img/human-battle.png",
-    raceImage3: "img/human-battle.png",
-    racialBonuses: {
-      bonus1: {
-        name: "Adaptive Potential",
-        description: "+1 to chosen attribute"
-      },
-      bonus2: {
-        name: "Second Wind",
-        description: "Once per encounter, recover 20% HP and Stamina when dropping below 80% HP"
-      },
-      bonus3: {
-        name: "Fast Learner",
-        description: "+10% XP gain to chosen proficiency"
-      }
-    }
-  },
-
-  elf: {
-    name: "Elf",
-    description: "The Elves were the first to awaken beneath the starlit boughs of Eldora, their spirits intertwined with the rhythm of nature and the flow of magic.Graceful, ancient, and contemplative, they craft living cities and art that endure for millennia.Their wisdom is matched only by their melancholy, for long life teaches both wonder and sorrow.Elves revere balance and consequence, believing every action ripples through eternity.In war, they move like whispers of wind and light — precise, silent, and devastating — favoring archery, magic, and misdirection over brute force.",
-    raceImage1: "img/elf-kingdom.png",
-    raceImage2: "img/elf-battle.png",
-    raceImage3: "img/elf-battle.png",
-    racialBonuses: {
-      bonus1: {
-        name: "Eldertide Grace",
-        description: "+2 DEX or +2 WIS"
-      },
-      bonus2: {
-        name: "Ancient Blessing",
-        description: "Once per encounter, add a d6 saving throw to any proficiency check"
-      },
-      bonus3: {
-        name: "Keen Senses",
-        description: "+75% Chance to detect hidden traps, weak illusions, or movement in foggy areas or dark rooms"
-      }
-    },
-  },
-
-  dwarf: {
-    name: "Dwarf",
-    description: "Forged in the deep places of the world, Dwarves are children of stone and flame. Their subterranean halls echo with the songs of forges and the oaths of kin. Honor, craftsmanship, and loyalty define their way of life, and their creations — be they weapons or monuments — endure as testaments to their pride. Their resilience is legendary, but their stubbornness can harden into isolation. They worship the Great Forge, believing each soul to be a spark struck from its divine fire. In battle, they are immovable, fighting with disciplined formations, unmatched craftsmanship, and an unyielding will.",
-    raceImage1: "img/dwarf-kingdom.png",
-    raceImage2: "img/dwarf-battle.png",
-    raceImage3: "img/dwarf-battle.png",
-    racialBonuses: {
-      bonus1: {
-        name: "Stoneborn Fortitude",
-        description: "+2 CON"
-      },
-      bonus2: {
-        name: "Stoneblood",
-        description: "Temporarily reduce all damage taken by 20% and 50% resistance to knockback or stagger for 5 seconds"
-      },
-      bonus3: {
-        name: "Iron Grip",
-        description: "-75% Chance to be disarmed or slip when hanging on ledges, vines, cliffs, ropes or enemy limbs"
-      }
-    },
-  },
-
-  hearthkin: {
-    name: "Hearthkin",
-    description: "Once nomads of the open plains, Hearthkin now dwell in quiet villages where laughter and warmth define their days. They live simply yet deeply, finding joy in family, good harvests, and stories shared by the hearth. Though small in stature, their courage runs deep — born from generations of surviving in the shadows of greater powers. Their belief in hearth spirits and humble virtues gives them strength unseen. On the battlefield, they rely on wit and agility, striking from cover or laying clever traps, proving that heart often outweighs might.",
-    raceImage1: "img/hearthkin-kingdom.png",
-    raceImage2: "img/hearthkin-battle.png",
-    raceImage3: "img/hearthkin-battle.png",
-    racialBonuses: {
-      bonus1: {
-        name: "Quick Witted",
-        description: "+2 DEX or +2 INT"
-      },
-      bonus2: {
-        name: "Fortunate Twist",
-        description: "Once per encounter, turn a failed roll into a partial success"
-      },
-      bonus3: {
-        name: "Nimblefoot",
-        description: "+15% to dodge and stealth"
-      }
-    },
-  },
-  catlan: {
-    name: "Catlan",
-    description: "Descendants of a distant and unknown origin, the Catlans blend instinct, grace, and intellect in equal measure. Displaced and unrooted, they move through the world as hunters, wanderers, and quiet observers—guided less by law and more by intuition and experience. Their communities are bound by trust and shared understanding rather than rigid structure, valuing awareness of both self and surroundings above all else. Some speak of a guiding presence in the night sky, not as a god, but as something felt rather than known—an instinctive pull that shapes their path. In battle, Catlans are swift and unpredictable, moving like shifting shadows—striking with precision before vanishing from reach.",
-    raceImage1: "img/catlan-kingdom.png",
-    raceImage2: "img/catlan-battle.png",
-    raceImage3: "img/catlan-battle.png",
-    racialBonuses: {
-      bonus1: {
-        name: "Feral",
-        description: "+2 STR or +2 DEX"
-      },
-      bonus2: {
-        name: "Pounce",
-        description: "Leap attack that spans 2 distance modifiers, deals 25% of attack damage, and 50% chance to stagger enemies"
-      },
-      bonus3: {
-        name: "Night Vision",
-        description: "Can see clearly in low-light and partial darkness"
-      }
-    },
-  },
-};
-
-const raceLinks = {
-  human: "myfrpg-race-select-humans.html",
-  elf: "myfrpg-race-select-elves.html",
-  dwarf: "myfrpg-race-select-dwarves.html",
-  hearthkin: "myfrpg-race-select-hearthkin.html",
-  catlan: "myfrpg-race-select-catlans.html"
-};
-
 const factions = {
   kolDragar: {
     name: "Kol Dragar",
@@ -235,7 +116,7 @@ const factions = {
 };
 
 
-const playerChoices = {};
+const playerChoices = JSON.parse(localStorage.getItem("playerChoices")) || {};
 let selectedRace = "";
 let selectedFaction = "";
 let lockedItem = null;
@@ -273,53 +154,6 @@ window.addEventListener("load", () => {
 // =========================================================================== //
 
 
-// ==================== GALLERY ITEM POPULATION - CHOOSE RACE PAGE ========================== //
-galleryItems.forEach(item => {
-
-  const raceKey = item.dataset.race;
-  const raceData = races[raceKey];
-
-  if (!raceData) return;
-
-  // Image population
-  const images = item.querySelectorAll("img");
-
-  images[0].src = raceData.raceImage1;
-  images[1].src = raceData.raceImage2;
-  images[2].src = raceData.raceImage3;
-
-  // Name population
-  item.querySelector(".image-name").textContent =
-    raceData.name;
-
-  // Description population
-  item.querySelector(".describe-main").innerHTML =
-    `<p>${raceData.description}</p>`;
-
-  // Racial bonuses population
-  let bonusesHTML = "";
-
-  for (const bonusKey in raceData.racialBonuses) {
-
-    const bonus =
-      raceData.racialBonuses[bonusKey];
-
-    bonusesHTML += `
-      <span class='racials'>
-        <strong>${bonus.name}:</strong>
-      </span>
-      ${bonus.description}<br>
-    `;
-  }
-
-  item.querySelector(".describe-extra").innerHTML =
-    bonusesHTML;
-
-});
-
-// ========================================================================================== //
-
-
 // ==================== GALLERY ITEM POPULATION - SELECTED RACE PAGE ========================== //
 galleryItems.forEach(item => {
 
@@ -349,43 +183,6 @@ galleryItems.forEach(item => {
 });
 
 // ========================================================================================== //
-
-
-// ======================== GALLERY CLICK TEXT EFFECT - CHOOSE RACE PAGE ======================== //
-// When the user clicks on an image (or its name), this script changes the
-// text inside the `.gameText` element. Each gallery item has its own message
-// stored in the `data-text` attribute. Clicking a new image replaces the text.
-// Clicking outside or another image resets or changes the message accordingly.
-
-// Loop through each gallery item and attach click event listeners
-galleryItems.forEach(item => {
-  const describeMain = item.querySelector('.describe-main');
-  const describeExtra = item.querySelector('.describe-extra');
-
-  // When an image is clicked, update the text display
-  item.addEventListener('click', () => {
-    if (!describeMain || !describeExtra) return;
-    mainInfoText.parentElement.classList.add("fade-out");
-    extraInfoText.parentElement.classList.add("fade-out");
-
-    setTimeout(() => {
-      mainInfoText.innerHTML = describeMain.innerHTML;
-      extraInfoText.innerHTML = describeExtra.innerHTML;
-      centerText.style.textAlign = "left";
-
-      mainInfoText.parentElement.classList.remove("fade-out");
-      mainInfoText.parentElement.classList.add("fade-in");
-      extraInfoText.parentElement.classList.remove("fade-out");
-      extraInfoText.parentElement.classList.add("fade-in");
-
-      setTimeout(() => {
-        mainInfoText.parentElement.classList.remove("fade-in");
-        extraInfoText.parentElement.classList.remove("fade-in");
-      }, 300);
-    }, 200);
-  });
-});
-// =========================================================================== //
 
 
 // ======================== GALLERY CLICK TEXT EFFECT - SELECTED RACE PAGE ======================== //
@@ -421,38 +218,6 @@ galleryItems.forEach(item => {
       }, 300);
     }, 200);
   });
-});
-// =========================================================================== //
-
-
-// ============== RESET TEXT WHEN CLICKING ANYWHERE ON THE PAGE - CHOOSE RACE PAGE ============== //
-// Reset text when user clicks anywhere else on the page
-document.addEventListener('click', (e) => {
-  // Check if the clicked element is NOT a gallery item
-  if (!e.target.closest('.gallery-item' || '.gallery-item-startingzones')) {
-    // Fade-out before updating
-    mainInfoText.parentElement.classList.add("fade-out");
-    extraInfoText.parentElement.classList.add("fade-out");
-
-    setTimeout(() => {
-      // Reset the default messages
-      mainInfoText.innerHTML = 'The people you descend from shape the strength within you';
-      extraInfoText.innerHTML = 'Racial Strenghts and Passives';
-      centerText.style.textAlign = "center"; // Re-center the text
-
-      // Fade back in
-      mainInfoText.parentElement.classList.remove("fade-out");
-      mainInfoText.parentElement.classList.add("fade-in");
-      extraInfoText.parentElement.classList.remove("fade-out");
-      extraInfoText.parentElement.classList.add("fade-in");
-
-      // Clean up fade-in class
-      setTimeout(() => {
-        mainInfoText.parentElement.classList.remove("fade-in");
-        extraInfoText.parentElement.classList.remove("fade-in");
-      }, 300);
-    }, 200);
-  }
 });
 // =========================================================================== //
 
@@ -503,7 +268,7 @@ document.addEventListener('click', (e) => {
 // =========================================================================== //
 
 
-// ===== IMAGE LOCK/UNLOCK SYSTEM & SAVE RACE CHOICE - CHOOSE RACE PAGE  ===== //
+// ===== IMAGE LOCK/UNLOCK SYSTEM & SAVE RACE CHOICE - SELECTED RACE PAGE  ===== //
 
 galleryItems.forEach(item => {
 
@@ -520,15 +285,15 @@ galleryItems.forEach(item => {
     item.classList.add('locked');
     lockedItem = item;
 
-    // SAVE CLICKED RACE KEY
-    selectedRace = item.dataset.race;
-    console.log("Selected Race:");
-    console.log(selectedRace);
+    // SAVE CLICKED FACTION KEY
+    selectedFaction = item.dataset.faction;
+    console.log("Selected Faction:");
+    console.log(selectedFaction);
 
-    // SAVE RACE DATA TO PLAYERCHOICES
-    playerChoices.race = {
-      key: selectedRace,
-      ...races[selectedRace]
+    // SAVE FACTION DATA TO PLAYERCHOICES
+    playerChoices.faction = {
+      key: selectedFaction,
+      ...factions[selectedFaction]
     };
     console.log("Player Choices:");
     console.log(playerChoices);
@@ -552,16 +317,16 @@ document.addEventListener('click', (e) => {
     lockedItem.classList.remove('locked');
     lockedItem.removeAttribute('background'); // Optional: Clear data-text on unlock
     lockedItem = null;
-    selectedRace = "";
-    delete playerChoices.race;
-    console.log("Race Deselected");
+    selectedFaction = "";
+    delete playerChoices.faction;
+    console.log("Faction Deselected");
   }
 });
 
 // Confirm selection
 confirmBtn.addEventListener('click', () => {
-  if (!selectedRace) {
-    alert("Please choose a race first.");
+  if (!selectedFaction) {
+    alert("Please choose a faction first.");
     return;
   }
 
@@ -573,7 +338,7 @@ confirmBtn.addEventListener('click', () => {
   console.log("Saved!");
   console.log(playerChoices);
 
-  window.location.href = raceLinks[selectedRace];
+  window.location.href = "index.html";
 });
 
 // Back button simply redirects to the previous page without affecting playerChoices
