@@ -115,15 +115,10 @@ const factions = {
   }
 };
 
-
 const playerChoices = JSON.parse(localStorage.getItem("playerChoices")) || {};
-let selectedRace = "";
+
 let selectedFaction = "";
 let lockedItem = null;
-
-const racialBonuses = {};
-const startingZones = {};
-const startingZoneBonuses = {};
 
 const gameText = document.querySelector('.gameText'); // Target the dynamic text container
 const galleryItems = document.querySelectorAll('.gallery-item'); // Select all gallery items
