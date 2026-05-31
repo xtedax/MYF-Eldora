@@ -703,6 +703,195 @@ a {
 }
 
 
+/* ========================= UI OVERLAY FOR NAME, GENER, & PORTRAIT SELECTION ========================= */
+
+/* =========================
+   MODAL
+========================= */
+
+.identity-modal {
+  position: relative;
+  z-index: 10;
+  width: 90%;
+  max-width: 850px;
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  margin: 0 auto;
+  padding: 40px;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 40px rgba(0, 0, 0, .5),
+    0 0 1px rgba(255, 255, 255, .1);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.modal-header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+
+  color: #f3e7c7;
+}
+
+.modal-header p {
+  color: #b7ab92;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* =========================
+   PORTRAITS
+========================= */
+
+.portrait-section h2 {
+  margin-bottom: 18px;
+  font-size: 1rem;
+  color: #d8c8a5;
+}
+
+.portrait-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.portrait {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #343434, #181818);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.portrait:hover {
+  transform: translateY(-3px);
+  border-color: #b89655;
+}
+
+.portrait.selected {
+  border-color: #d4af6c;
+  box-shadow: 0 0 18px rgba(212, 175, 108, .25);
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 10px;
+  color: #cdb98d;
+  font-size: .95rem;
+}
+
+input {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, .08);
+  background: #131313;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: .25s;
+}
+
+input:focus {
+  border-color: #b89655;
+}
+
+/* =========================
+    NAME FEEDBACK
+========================= */
+
+.feedback-message {
+  margin-top: -18px;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+  color: #e0d8c3;
+  font-style: italic;
+}
+
+/* =========================
+   GENDER
+========================= */
+
+.gender-options {
+  display: flex;
+  gap: 12px;
+}
+
+.gender-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, .08);
+  background: #131313;
+  color: #d6d6d6;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.gender-btn:hover {
+  border-color: #b89655;
+}
+
+.gender-btn.selected {
+  background: rgba(184, 150, 85, .15);
+  border-color: #d4af6c;
+  color: #f1dfb3;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.modal-footer {
+  margin-top: 35px;
+}
+
+.continue-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d4af6c, #b89655);
+  color: #141414;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.continue-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+
+
+
 /* ======================== MODAL (Small Screen Version of gameText) ======================== */
 .modal {
   display: none;

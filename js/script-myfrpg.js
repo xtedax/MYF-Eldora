@@ -202,37 +202,6 @@ galleryItems.forEach(item => {
 // ========================================================================================== //
 
 
-// ==================== GALLERY ITEM POPULATION - SELECTED RACE PAGE ========================== //
-galleryItems.forEach(item => {
-
-  const factionKey = item.dataset.faction;
-  const factionData = factions[factionKey];
-
-  if (!factionData) return;
-
-  // Image population
-  const images = item.querySelectorAll("img");
-
-  images[0].src = factionData.factionImage;
-
-
-  // Name population
-  item.querySelector(".image-name").textContent =
-    factionData.name;
-
-  // Description population
-  item.querySelector(".describe-main2").innerHTML =
-    `<p>${factionData.description}</p>`;
-
-  // Faction bonuses population
-  item.querySelector(".describe-extra2").innerHTML =
-    `<p>${factionData.bonusDescription}</p>`;
-
-});
-
-// ========================================================================================== //
-
-
 // ======================== GALLERY CLICK TEXT EFFECT - CHOOSE RACE PAGE ======================== //
 // When the user clicks on an image (or its name), this script changes the
 // text inside the `.gameText` element. Each gallery item has its own message

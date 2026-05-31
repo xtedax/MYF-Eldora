@@ -206,6 +206,69 @@
             </div>
         </div>
     </main>
+
+
+    <!-- Identity Modal (Name, Gender, Portrait) -->
+    <div class="identity-modal">
+
+        <div class="modal-header">
+            <h1>The Unbound</h1>
+            <p>
+                The path before you is yours alone.<br>
+                By what name shall Eldora know you?
+            </p>
+        </div>
+
+        <div class="form-section">
+
+            <div class="input-group">
+                <label for="character-name">Name</label>
+                <input type="text" id="character-name" placeholder="Enter your name..." maxlength="30">
+            </div>
+            <div id="name-feedback" class="feedback-message"></div>
+
+            <div class="input-group">
+                <label>Biological Gender</label>
+
+                <div class="gender-options">
+
+                    <button class="gender-btn selected">
+                        Male
+                    </button>
+
+                    <button class="gender-btn">
+                        Female
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="portrait-section">
+                <h2>Choose Your Portrait</h2>
+
+                <div class="portrait-grid">
+                    <div class="portrait selected"></div>
+                    <div class="portrait"></div>
+                    <div class="portrait"></div>
+                    <div class="portrait"></div>
+                    <div class="portrait"></div>
+                    <div class="portrait"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+            <button class="continue-btn">
+                Continue
+            </button>
+        </div>
+
+    </div>
+
+
+
+
     <!-- Modal for small screens -->
     <div id="mobileModal" class="modal">
         <div class="modal-content">

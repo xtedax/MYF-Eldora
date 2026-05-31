@@ -136,6 +136,8 @@ const dwarvesStartingLegacy = document.querySelector('.dwarvesStartingLegacy');
 const hearthkinStartingClan = document.querySelector('.hearthkinStartingClan');
 const catlansStartingGrounds = document.querySelector('.catlansStartingGrounds');
 const centerText = document.querySelector('.centerText');
+const nameInput = document.getElementById("character-name");
+const nameFeedback = document.getElementById("name-feedback");
 
 // ================================================================== //
 
@@ -341,6 +343,101 @@ backBtn.addEventListener('click', () => {
   window.location.href = "myfrpg-race-select.html";
 });
 // ============================================================================ //
+
+
+// ===== IDENTITY MODAL (NAME, GENDER, PORTRAIT) - SELECTED RACE PAGE  ===== //
+
+nameInput.addEventListener("input", () => {
+
+  const trimmedName = nameInput.value
+    .normalize("NFKC")
+    .replace(/\u200B/g, "") // zero-width space fix
+    .trim();
+  const lower = trimmedName.toLowerCase();
+  let message = "Names may contain letters, spaces, apostrophes, and hyphens.";
+
+  // Empty state (neutral, not error)
+  if (trimmedName.length === 0) {
+    nameFeedback.textContent = message;
+    return;
+  }
+
+  // Length check (important to prevent abuse of the name input for XSS or layout-breaking purposes)
+  if (trimmedName.length < 3) {
+    nameFeedback.textContent = "Your name must contain at least three letters before it may be woven into the chronicles of Eldora.";
+    return;
+  }
+
+  if (trimmedName.length > 20) {
+    nameFeedback.textContent = "Your name is too long for even the eldest scribes to record.";
+    return;
+  }
+
+  // Character check (only allow letters, spaces, apostrophes, and hyphens)
+  if (!/^[A-Za-z\s'-]+$/.test(trimmedName)) {
+    nameFeedback.textContent = "Your name may only contain letters, spaces, apostrophes, and hyphens.";
+    return;
+  }
+
+  // Repitition check (prevent 4 or more of the same character in a row, which is often a sign of keyboard smashing or trolling)
+  if (/(.)\1{3,}/.test(trimmedName)) {
+    nameFeedback.textContent = "The Threads of Fate reject names with excessive repeated letters.";
+    return;
+  }
+
+  // Keyboard smash check (common patterns that indicate trolling or non-serious names)
+  const bannedPatterns = [
+    "asdf", "qwer", "zxcv",
+    "1234", "abcd",
+    "aaaa", "1111", "0000"
+  ];
+
+  // Pattern check (important to prevent common keyboard smash patterns that are often used for trolling or non-serious names)
+  for (const pattern of bannedPatterns) {
+    if (lower.includes(pattern)) {
+      nameFeedback.textContent = "Please choose a name worthy of remembrance.";
+      return;
+    }
+  }
+
+  // Consonant spam check (prevent 6 or more consonants in a row, which is often a sign of keyboard smashing or trolling)
+  if (/[bcdfghjklmnpqrstvwxyz]{6,}/.test(lower)) {
+    nameFeedback.textContent = "Please choose a name worthy of remembrance.";
+    return;
+  }
+
+  // Vowel calculation and ratio check (important to prevent names that are likely keyboard smashing or non-serious, while allowing for creative and unique names that may have unusual letter combinations)
+  const vowels = lower.match(/[aeiou]/g);
+  const vowelCount = vowels ? vowels.length : 0;
+  const vowelRatio = vowelCount / Math.max(lower.length, 1);
+
+  // Single unified vowel rule (important to allow for creative names that may have unusual letter combinations, while preventing names that are likely keyboard smashing or non-serious due to a lack of vowels)
+  if (lower.length >= 8 && vowelRatio < 0.2) {
+    nameFeedback.textContent = "Please choose a name worthy of remembrance.";
+    return;
+  }
+
+  // Reserved names check (important to prevent players from using names that are reserved for admins, moderators, or the game system, which could cause confusion or be used for trolling)
+  const reservedNames = [
+    "admin", "administrator",
+    "moderator", "gamemaster",
+    "gm", "system",
+    "developer", "eldora"
+  ];
+
+  if (reservedNames.includes(lower)) {
+    nameFeedback.textContent = "That name is reserved by the realm.";
+  }
+
+  // Success state (valid name)
+  nameFeedback.textContent = "This name will be etched into the tapestry of fate.";
+});
+
+// ============================================================================ //
+
+
+
+
 
 
 // ======================== RESPONSIVE MODAL ======================== //
