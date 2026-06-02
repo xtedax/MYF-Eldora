@@ -120,6 +120,7 @@ const playerChoices = JSON.parse(localStorage.getItem("playerChoices")) || {};
 let selectedFaction = "";
 let lockedItem = null;
 
+
 const gameText = document.querySelector('.gameText'); // Target the dynamic text container
 const galleryItems = document.querySelectorAll('.gallery-item'); // Select all gallery items
 const galleryItemsStartingZones = document.querySelectorAll('.gallery-item-startingzones'); // Select all starting zone gallery items
@@ -138,6 +139,8 @@ const catlansStartingGrounds = document.querySelector('.catlansStartingGrounds')
 const centerText = document.querySelector('.centerText');
 const nameInput = document.getElementById("character-name");
 const nameFeedback = document.getElementById("name-feedback");
+const maleGenderBtn = document.getElementById("male-gender");
+const femaleGenderBtn = document.getElementById("female-gender");
 
 // ================================================================== //
 
@@ -345,7 +348,7 @@ backBtn.addEventListener('click', () => {
 // ============================================================================ //
 
 
-// ===== IDENTITY MODAL (NAME, GENDER, PORTRAIT) - SELECTED RACE PAGE  ===== //
+// ================ IDENTITY MODAL: NAME - SELECTED RACE PAGE  ================ //
 
 nameInput.addEventListener("input", () => {
 
@@ -436,8 +439,52 @@ nameInput.addEventListener("input", () => {
 // ============================================================================ //
 
 
+// ================ IDENTITY MODAL: GENDER - SELECTED RACE PAGE  ================ //
+
+maleGenderBtn.addEventListener("click", () => {
+  maleGenderBtn.classList.add("selected");
+  femaleGenderBtn.classList.remove("selected");
+  selectedGender = "male";
+  console.log("Selected Gender: " + selectedGender);
+});
+
+femaleGenderBtn.addEventListener("click", () => {
+  femaleGenderBtn.classList.add("selected");
+  maleGenderBtn.classList.remove("selected");
+  selectedGender = "female";
+  console.log("Selected Gender: " + selectedGender);
+});
+
+// ============================================================================ //
 
 
+// ================ IDENTITY MODAL: PORTRAIT - SELECTED RACE PAGE  ================ //
+
+// 1. Select all individual portrait cards
+const portraits = document.querySelectorAll(".portrait");
+
+// 2. Automatically find whichever portrait starts with the "picked" class in the HTML
+let pickedItem = document.querySelector(".portrait.picked");
+
+// 3. Add click event listeners to each portrait card
+portraits.forEach(item => {
+  item.addEventListener("click", function (e) {
+    e.stopPropagation(); // Stops the click from bubbling up to the document
+
+    // If there is an old picked item, remove the class from it
+    if (pickedItem) {
+      pickedItem.classList.remove('picked');
+    }
+
+    // "this" now correctly refers to the clicked .portrait div
+    this.classList.add('picked');
+
+    // Track this item as the new picked item
+    pickedItem = this;
+  });
+});
+
+// ============================================================================ //
 
 
 // ======================== RESPONSIVE MODAL ======================== //

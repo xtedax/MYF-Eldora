@@ -773,6 +773,12 @@ a {
   border: 2px solid transparent;
   cursor: pointer;
   transition: .25s ease;
+  overflow: hidden;
+}
+
+.player-portrait {
+  border-color: rgba(255, 255, 255, .08);
+  max-width: 100%;
 }
 
 .portrait:hover {
@@ -780,7 +786,7 @@ a {
   border-color: #b89655;
 }
 
-.portrait.selected {
+.portrait.picked {
   border-color: #d4af6c;
   box-shadow: 0 0 18px rgba(212, 175, 108, .25);
 }
@@ -869,10 +875,13 @@ input:focus {
 
 .modal-footer {
   margin-top: 35px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
 }
 
 .continue-btn {
-  width: 100%;
+  width: 30%;
   padding: 16px;
   border: none;
   border-radius: 12px;
@@ -887,6 +896,7 @@ input:focus {
 .continue-btn:hover {
   transform: translateY(-2px);
   filter: brightness(1.05);
+  color: white;
 }
 
 
