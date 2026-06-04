@@ -90,7 +90,7 @@ a {
 
 /* Hidden elements */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .yellow {
@@ -791,6 +791,10 @@ a {
   box-shadow: 0 0 18px rgba(212, 175, 108, .25);
 }
 
+#female-portraits {
+  display: none;
+}
+
 /* =========================
    FORM
 ========================= */
@@ -890,13 +894,12 @@ input:focus {
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: .25s ease;
+  transition: all .25s ease;
 }
 
 .continue-btn:hover {
   transform: translateY(-2px);
-  filter: brightness(1.05);
-  color: white;
+  box-shadow: 0 5px 15px rgba(212, 175, 108, 0.5);
 }
 
 

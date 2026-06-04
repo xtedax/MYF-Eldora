@@ -115,11 +115,68 @@ const factions = {
   }
 };
 
+const playerImages = {
+  kolDragar: {
+    male: {
+      male1: "img/koldragar-male1.png",
+      male2: "img/koldragar-male2.png",
+      male3: "img/koldragar-male3.png",
+      male4: "img/koldragar-male4.png",
+      male5: "img/koldragar-male5.png",
+      male6: "img/koldragar-male6.png"
+    },
+    female: {
+      female1: "img/koldragar-female1.png",
+      female2: "img/koldragar-female2.png",
+      female3: "img/koldragar-female3.png",
+      female4: "img/koldragar-female4.png",
+      female5: "img/koldragar-female5.png",
+      female6: "img/koldragar-female6.png"
+    }
+  },
+  valenreach: {
+    male: {
+      male1: "img/valenreach-male1.png",
+      male2: "img/valenreach-male2.png",
+      male3: "img/valenreach-male3.png",
+      male4: "img/valenreach-male4.png",
+      male5: "img/valenreach-male5.png",
+      male6: "img/valenreach-male6.png",
+    },
+    female: {
+      female1: "img/valenreach-female1.png",
+      female2: "img/valenreach-female2.png",
+      female3: "img/valenreach-female3.png",
+      female4: "img/valenreach-female4.png",
+      female5: "img/valenreach-female5.png",
+      female6: "img/valenreach-female6.png"
+    },
+  },
+  luminaria: {
+    male: {
+      male1: "img/luminaria-male1.png",
+      male2: "img/luminaria-male2.png",
+      male3: "img/luminaria-male3.png",
+      male4: "img/luminaria-male4.png",
+      male5: "img/luminaria-male5.png",
+      male6: "img/luminaria-male6.png",
+    },
+    female: {
+      female1: "img/luminaria-female1.png",
+      female2: "img/luminaria-female2.png",
+      female3: "img/luminaria-female3.png",
+      female4: "img/luminaria-female4.png",
+      female5: "img/luminaria-female5.png",
+      female6: "img/luminaria-female6.png"
+    },
+  }
+};
+
 const playerChoices = JSON.parse(localStorage.getItem("playerChoices")) || {};
 
 let selectedFaction = "";
 let lockedItem = null;
-
+let selectedGender = "male"; // Default gender
 
 const gameText = document.querySelector('.gameText'); // Target the dynamic text container
 const galleryItems = document.querySelectorAll('.gallery-item'); // Select all gallery items
@@ -141,6 +198,8 @@ const nameInput = document.getElementById("character-name");
 const nameFeedback = document.getElementById("name-feedback");
 const maleGenderBtn = document.getElementById("male-gender");
 const femaleGenderBtn = document.getElementById("female-gender");
+const malePortraitsContainer = document.getElementById("male-portraits");
+const femalePortraitsContainer = document.getElementById("female-portraits");
 
 // ================================================================== //
 
@@ -446,6 +505,15 @@ maleGenderBtn.addEventListener("click", () => {
   femaleGenderBtn.classList.remove("selected");
   selectedGender = "male";
   console.log("Selected Gender: " + selectedGender);
+
+  malePortraitsContainer.classList.remove("hidden");
+  malePortraitsContainer.style.display = "grid"; // Ensure it uses grid layout when shown
+  femalePortraitsContainer.classList.add("hidden");
+  femalePortraitsContainer.style.display = "none";
+
+  // Automatically reset selection to the first visible male portrait
+  const activeMale = malePortraitsContainer.querySelector(".portrait");
+  if (activeMale) activeMale.click();
 });
 
 femaleGenderBtn.addEventListener("click", () => {
@@ -453,36 +521,98 @@ femaleGenderBtn.addEventListener("click", () => {
   maleGenderBtn.classList.remove("selected");
   selectedGender = "female";
   console.log("Selected Gender: " + selectedGender);
+
+  malePortraitsContainer.classList.add("hidden");
+  malePortraitsContainer.style.display = "none";
+  femalePortraitsContainer.classList.remove("hidden");
+  femalePortraitsContainer.style.display = "grid"; // Ensure it uses grid layout when shown
+
+  // Automatically reset selection to the first visible female portrait
+  const activeFemale = femalePortraitsContainer.querySelector(".portrait");
+  if (activeFemale) activeFemale.click();
 });
 
 // ============================================================================ //
 
 
+// ================ IDENTITY MODAL: PORTRAIT UTILITY FUNCTION ================ //
+
+// Call this function whenever the player selects/changes their Faction!
+function updatePortraitImages(factionName) {
+  selectedFaction = factionName; // Keep your global tracking variable updated
+
+  const factionData = playerImages[factionName];
+  if (!factionData) return;
+
+  // 1. Update all male images matching their data-portrait keys
+  const maleCards = malePortraitsContainer.querySelectorAll(".portrait");
+  maleCards.forEach(card => {
+    const fullKey = card.getAttribute("data-portrait"); // e.g., "kolDragar-male1"
+    const shortKey = fullKey.split("-")[1]; // Extract "male1" from "kolDragar-male1"
+    const imgElement = card.querySelector(".player-portrait");
+    if (factionData.male[shortKey]) {
+      imgElement.src = factionData.male[shortKey];
+    }
+  });
+
+  // 2. Update all female images matching their data-portrait keys
+  const femaleCards = femalePortraitsContainer.querySelectorAll(".portrait");
+  femaleCards.forEach(card => {
+    const fullKey = card.getAttribute("data-portrait"); // e.g., "kolDragar-female1"
+    const shortKey = fullKey.split("-")[1]; // Extract "female1" from "kolDragar-female1"
+    const imgElement = card.querySelector(".player-portrait");
+    if (factionData.female[shortKey]) {
+      imgElement.src = factionData.female[shortKey];
+    }
+  });
+}
+// ============================================================================ //
+
+
 // ================ IDENTITY MODAL: PORTRAIT - SELECTED RACE PAGE  ================ //
 
-// 1. Select all individual portrait cards
+// 1. Select all portrait cards
 const portraits = document.querySelectorAll(".portrait");
 
-// 2. Automatically find whichever portrait starts with the "picked" class in the HTML
-let pickedItem = document.querySelector(".portrait.picked");
-
-// 3. Add click event listeners to each portrait card
+// 2. Add click event listener to each portrait card
 portraits.forEach(item => {
   item.addEventListener("click", function (e) {
     e.stopPropagation(); // Stops the click from bubbling up to the document
 
-    // If there is an old picked item, remove the class from it
-    if (pickedItem) {
-      pickedItem.classList.remove('picked');
+    // 3. Find the currently picked portrait (if any)
+    const currentPicked = document.querySelector(".portrait.picked");
+
+    // 4. If there is a currently picked portrait and it's not the one just clicked, remove the "picked" class from it
+    if (currentPicked) {
+      currentPicked.classList.remove('picked');
     }
 
-    // "this" now correctly refers to the clicked .portrait div
+    // 5. Add the "picked" class to the clicked portrait
     this.classList.add('picked');
 
-    // Track this item as the new picked item
-    pickedItem = this;
+    // Track choices for your localStorage setup
+    console.log(`Selected ${selectedGender} portrait:`, this.getAttribute("data-portrait"));
+  });
+
+  maleGenderBtn.addEventListener("click", () => {
+    // ... your existing show/hide code ...
+
+    // Automatically reset selection to the first visible male portrait
+    const activeMale = malePortraitsContainer.querySelector(".portrait");
+    if (activeMale) activeMale.click();
+  });
+
+  femaleGenderBtn.addEventListener("click", () => {
+    // ... your existing show/hide code ...
+
+    // Automatically reset selection to the first visible female portrait
+    const activeFemale = femalePortraitsContainer.querySelector(".portrait");
+    if (activeFemale) activeFemale.click();
   });
 });
+
+// Setup a default layout initialization for page load (e.g., Kol Dragar)
+updatePortraitImages("kolDragar");
 
 // ============================================================================ //
 
