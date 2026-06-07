@@ -421,8 +421,10 @@ confirmBtn.addEventListener('click', () => {
     JSON.stringify(playerChoices)
   );
 
+  sessionStorage.setItem("fromRacePage", "true");
+
   console.log("Saved!");
-  console.log(playerChoices);
+  console.log("Saved local state frame and stamped navigation passport!", playerChoices);
 
   window.location.href = raceLinks[selectedRace];
 });

@@ -1,3 +1,25 @@
+// ============================================================================ //
+// ===== NAVIGATION & REFRESH DETECTION CLEANUP                            ===== //
+// ============================================================================ //
+(function () {
+  // Check our session passport flag
+  const cameFromRacePage = sessionStorage.getItem("fromRacePage");
+
+  // If the flag exists, the user came directly from the race selection page
+  if (cameFromRacePage === "true") {
+    console.log("Legitimate transition detected. Keeping localStorage.");
+
+    // Consume the flag so a subsequent refresh won't have it
+    sessionStorage.removeItem("fromRacePage");
+  } else {
+    // If the flag is missing, this is a direct load or a page refresh!
+    console.warn("Refresh or direct load detected! Purging player selections.");
+    localStorage.removeItem("playerChoices");
+  }
+})();
+// ================================================================== //
+
+
 // ======================== GLOBAL VARIABLES ======================== //
 
 const factions = {
@@ -194,6 +216,7 @@ const dwarvesStartingLegacy = document.querySelector('.dwarvesStartingLegacy');
 const hearthkinStartingClan = document.querySelector('.hearthkinStartingClan');
 const catlansStartingGrounds = document.querySelector('.catlansStartingGrounds');
 const centerText = document.querySelector('.centerText');
+const identityModal = document.getElementById("identity-modal");
 const nameInput = document.getElementById("character-name");
 const nameFeedback = document.getElementById("name-feedback");
 const maleGenderBtn = document.getElementById("male-gender");
@@ -384,7 +407,7 @@ document.addEventListener('click', (e) => {
 
 // Confirm selection
 confirmBtn.addEventListener('click', () => {
-  if (!selectedFaction) {
+  if (!selectedFaction || (Object.keys(playerChoices).length === 0 && playerChoices.constructor === Object) || !playerChoices.faction) {
     alert("Please choose a faction first.");
     return;
   }
@@ -397,13 +420,13 @@ confirmBtn.addEventListener('click', () => {
   console.log("Saved!");
   console.log(playerChoices);
 
-  window.location.href = "index.html";
 });
 
 // Back button simply redirects to the previous page without affecting playerChoices
 backBtn.addEventListener('click', () => {
   window.location.href = "myfrpg-race-select.html";
 });
+
 // ============================================================================ //
 
 

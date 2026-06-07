@@ -709,6 +709,10 @@ a {
    MODAL
 ========================= */
 
+#identity-modal.hidden {
+  display: none !important;
+}
+
 .identity-modal {
   position: relative;
   z-index: 10;
