@@ -318,7 +318,8 @@ const extraInfoText = document.getElementById("extraInfoText");
 const extraInfoText2 = document.getElementById("extraInfoText2");
 const confirmBtn = document.getElementById("confirmBtn");
 const backBtn = document.getElementById("backBtn");
-const modalConfirmBtn = document.getElementById("modalConfirmBtn");
+const modalContinueBtn = document.getElementById("modal-Continue-Btn");
+const modalBackBtn = document.getElementById("modal-Back-Btn");
 const humansStartingZone = document.querySelector('.humansStartingzone');
 const elvesStartingLineage = document.querySelector('.elvesStartingLineage');
 const dwarvesStartingLegacy = document.querySelector('.dwarvesStartingLegacy');
@@ -500,7 +501,8 @@ document.addEventListener('click', (e) => {
     e.target.closest('.gallery-item') ||
     e.target.closest('#confirmBtn') ||
     e.target.closest('#backBtn') ||
-    e.target.closest('#modalConfirmBtn')
+    e.target.closest('#modal-Continue-Btn') ||
+    e.target.closest('#modal-Back-Btn')
   ) {
     return;
   }
@@ -532,6 +534,11 @@ confirmBtn.addEventListener('click', () => {
 
   // This executes the function ONLY after the user explicitly hits confirm
   updatePortraitImages(selectedFaction);
+
+  // 4. SHOW THE MODAL: Reveal the identity setup modal UI element
+  if (identityModal) {
+    identityModal.classList.remove("hidden");
+  }
 });
 
 // Back button simply redirects to the previous page without affecting playerChoices
@@ -767,6 +774,23 @@ portraits.forEach(item => {
 
 if (playerChoices.faction) {
   updatePortraitImages(playerChoices.faction.key);
+}
+
+// ============================================================================ //
+
+
+// ================ IDENTITY MODAL: CONTINUE & BACK BUTTONS - SELECTED RACE PAGE  ================ //
+
+// Back button simply hides the modal without affecting playerChoices, allowing the player to return to their faction selection and make changes if desired. The click event is stopped from propagating to prevent it from triggering the document click listener that resets selections.
+if (modalBackBtn) {
+  modalBackBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevents the click event from bubbling up to the document
+
+    // HIDE THE MODAL: Re-apply the hidden class
+    if (identityModal) {
+      identityModal.classList.add("hidden");
+    }
+  });
 }
 
 // ============================================================================ //

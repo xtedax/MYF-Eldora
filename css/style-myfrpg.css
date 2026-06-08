@@ -888,7 +888,7 @@ input:focus {
   justify-content: center;
 }
 
-.continue-btn {
+.modal-btn {
   width: 30%;
   padding: 16px;
   border: none;
@@ -901,7 +901,7 @@ input:focus {
   transition: all .25s ease;
 }
 
-.continue-btn:hover {
+.modal-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(212, 175, 108, 0.5);
 }
