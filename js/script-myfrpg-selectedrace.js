@@ -140,56 +140,164 @@ const factions = {
 const playerImages = {
   kolDragar: {
     male: {
-      male1: "img/koldragar-male1.png",
-      male2: "img/koldragar-male2.png",
-      male3: "img/koldragar-male3.png",
-      male4: "img/koldragar-male4.png",
-      male5: "img/koldragar-male5.png",
-      male6: "img/koldragar-male6.png"
+      male1: {
+        img: "img/koldragar-male1.png",
+        alt: "Kol Dragar Male Portrait 1"
+      },
+      male2: {
+        img: "img/koldragar-male2.png",
+        alt: "Kol Dragar Male Portrait 2"
+      },
+      male3: {
+        img: "img/koldragar-male3.png",
+        alt: "Kol Dragar Male Portrait 3"
+      },
+      male4: {
+        img: "img/koldragar-male4.png",
+        alt: "Kol Dragar Male Portrait 4"
+      },
+      male5: {
+        img: "img/koldragar-male5.png",
+        alt: "Kol Dragar Male Portrait 5"
+      },
+      male6: {
+        img: "img/koldragar-male6.png",
+        alt: "Kol Dragar Male Portrait 6"
+      }
     },
     female: {
-      female1: "img/koldragar-female1.png",
-      female2: "img/koldragar-female2.png",
-      female3: "img/koldragar-female3.png",
-      female4: "img/koldragar-female4.png",
-      female5: "img/koldragar-female5.png",
-      female6: "img/koldragar-female6.png"
+      female1: {
+        img: "img/koldragar-female1.png",
+        alt: "Kol Dragar Female Portrait 1"
+      },
+      female2: {
+        img: "img/koldragar-female2.png",
+        alt: "Kol Dragar Female Portrait 2"
+      },
+      female3: {
+        img: "img/koldragar-female3.png",
+        alt: "Kol Dragar Female Portrait 3"
+      },
+      female4: {
+        img: "img/koldragar-female4.png",
+        alt: "Kol Dragar Female Portrait 4"
+      },
+      female5: {
+        img: "img/koldragar-female5.png",
+        alt: "Kol Dragar Female Portrait 5"
+      },
+      female6: {
+        img: "img/koldragar-female6.png",
+        alt: "Kol Dragar Female Portrait 6"
+      }
     }
   },
   valenreach: {
     male: {
-      male1: "img/valenreach-male1.png",
-      male2: "img/valenreach-male2.png",
-      male3: "img/valenreach-male3.png",
-      male4: "img/valenreach-male4.png",
-      male5: "img/valenreach-male5.png",
-      male6: "img/valenreach-male6.png",
+      male1: {
+        img: "img/valenreach-male1.png",
+        alt: "Valenreach Male Portrait 1"
+      },
+      male2: {
+        img: "img/valenreach-male2.png",
+        alt: "Valenreach Male Portrait 2"
+      },
+      male3: {
+        img: "img/valenreach-male3.png",
+        alt: "Valenreach Male Portrait 3"
+      },
+      male4: {
+        img: "img/valenreach-male4.png",
+        alt: "Valenreach Male Portrait 4"
+      },
+      male5: {
+        img: "img/valenreach-male5.png",
+        alt: "Valenreach Male Portrait 5"
+      },
+      male6: {
+        img: "img/valenreach-male6.png",
+        alt: "Valenreach Male Portrait 6"
+      }
     },
     female: {
-      female1: "img/valenreach-female1.png",
-      female2: "img/valenreach-female2.png",
-      female3: "img/valenreach-female3.png",
-      female4: "img/valenreach-female4.png",
-      female5: "img/valenreach-female5.png",
-      female6: "img/valenreach-female6.png"
+      female1: {
+        img: "img/valenreach-female1.png",
+        alt: "Valenreach Female Portrait 1"
+      },
+      female2: {
+        img: "img/valenreach-female2.png",
+        alt: "Valenreach Female Portrait 2"
+      },
+      female3: {
+        img: "img/valenreach-female3.png",
+        alt: "Valenreach Female Portrait 3"
+      },
+      female4: {
+        img: "img/valenreach-female4.png",
+        alt: "Valenreach Female Portrait 4"
+      },
+      female5: {
+        img: "img/valenreach-female5.png",
+        alt: "Valenreach Female Portrait 5"
+      },
+      female6: {
+        img: "img/valenreach-female6.png",
+        alt: "Valenreach Female Portrait 6"
+      }
     },
   },
   luminaria: {
     male: {
-      male1: "img/luminaria-male1.png",
-      male2: "img/luminaria-male2.png",
-      male3: "img/luminaria-male3.png",
-      male4: "img/luminaria-male4.png",
-      male5: "img/luminaria-male5.png",
-      male6: "img/luminaria-male6.png",
+      male1: {
+        img: "img/luminaria-male1.png",
+        alt: "Luminaria Male Portrait 1"
+      },
+      male2: {
+        img: "img/luminaria-male2.png",
+        alt: "Luminaria Male Portrait 2"
+      },
+      male3: {
+        img: "img/luminaria-male3.png",
+        alt: "Luminaria Male Portrait 3"
+      },
+      male4: {
+        img: "img/luminaria-male4.png",
+        alt: "Luminaria Male Portrait 4"
+      },
+      male5: {
+        img: "img/luminaria-male5.png",
+        alt: "Luminaria Male Portrait 5"
+      },
+      male6: {
+        img: "img/luminaria-male6.png",
+        alt: "Luminaria Male Portrait 6"
+      }
     },
     female: {
-      female1: "img/luminaria-female1.png",
-      female2: "img/luminaria-female2.png",
-      female3: "img/luminaria-female3.png",
-      female4: "img/luminaria-female4.png",
-      female5: "img/luminaria-female5.png",
-      female6: "img/luminaria-female6.png"
+      female1: {
+        img: "img/luminaria-female1.png",
+        alt: "Luminaria Female Portrait 1"
+      },
+      female2: {
+        img: "img/luminaria-female2.png",
+        alt: "Luminaria Female Portrait 2"
+      },
+      female3: {
+        img: "img/luminaria-female3.png",
+        alt: "Luminaria Female Portrait 3"
+      },
+      female4: {
+        img: "img/luminaria-female4.png",
+        alt: "Luminaria Female Portrait 4"
+      },
+      female5: {
+        img: "img/luminaria-female5.png",
+        alt: "Luminaria Female Portrait 5"
+      },
+      female6: {
+        img: "img/luminaria-female6.png",
+        alt: "Luminaria Female Portrait 6"
+      }
     },
   }
 };
@@ -210,6 +318,7 @@ const extraInfoText = document.getElementById("extraInfoText");
 const extraInfoText2 = document.getElementById("extraInfoText2");
 const confirmBtn = document.getElementById("confirmBtn");
 const backBtn = document.getElementById("backBtn");
+const modalConfirmBtn = document.getElementById("modalConfirmBtn");
 const humansStartingZone = document.querySelector('.humansStartingzone');
 const elvesStartingLineage = document.querySelector('.elvesStartingLineage');
 const dwarvesStartingLegacy = document.querySelector('.dwarvesStartingLegacy');
@@ -390,7 +499,8 @@ document.addEventListener('click', (e) => {
   if (
     e.target.closest('.gallery-item') ||
     e.target.closest('#confirmBtn') ||
-    e.target.closest('#backBtn')
+    e.target.closest('#backBtn') ||
+    e.target.closest('#modalConfirmBtn')
   ) {
     return;
   }
@@ -420,6 +530,8 @@ confirmBtn.addEventListener('click', () => {
   console.log("Saved!");
   console.log(playerChoices);
 
+  // This executes the function ONLY after the user explicitly hits confirm
+  updatePortraitImages(selectedFaction);
 });
 
 // Back button simply redirects to the previous page without affecting playerChoices
@@ -561,39 +673,58 @@ femaleGenderBtn.addEventListener("click", () => {
 // ================ IDENTITY MODAL: PORTRAIT UTILITY FUNCTION ================ //
 
 // Call this function whenever the player selects/changes their Faction!
-function updatePortraitImages(factionName) {
-  selectedFaction = factionName; // Keep your global tracking variable updated
+function updatePortraitImages(factionKey) {
+  // Guard check: Ensure the faction exists in our tracking object layout
+  if (!playerImages[factionKey]) {
+    console.error(`Faction key "${factionKey}" not found in playerImages.`);
+    return;
+  }
 
-  const factionData = playerImages[factionName];
-  if (!factionData) return;
-
-  // 1. Update all male images matching their data-portrait keys
+  // 1. Process Male Portraits
+  const maleData = playerImages[factionKey].male;
   const maleCards = malePortraitsContainer.querySelectorAll(".portrait");
+
   maleCards.forEach(card => {
-    const fullKey = card.getAttribute("data-portrait"); // e.g., "kolDragar-male1"
-    const shortKey = fullKey.split("-")[1]; // Extract "male1" from "kolDragar-male1"
-    const imgElement = card.querySelector(".player-portrait");
-    if (factionData.male[shortKey]) {
-      imgElement.src = factionData.male[shortKey];
+    const portraitKey = card.dataset.portrait; // e.g., "kolDragar-male1"
+
+    // Extract the specific image identifier key (e.g., "male1")
+    // This splits "kolDragar-male1" at the hyphen and grabs the second half
+    const shortKey = portraitKey.split("-")[1];
+
+    if (maleData[shortKey]) {
+      const imgElement = card.querySelector(".player-portrait");
+      if (imgElement) {
+        imgElement.src = maleData[shortKey].img;
+        imgElement.alt = maleData[shortKey].alt;
+      }
     }
   });
 
-  // 2. Update all female images matching their data-portrait keys
+  // 2. Process Female Portraits
+  const femaleData = playerImages[factionKey].female;
   const femaleCards = femalePortraitsContainer.querySelectorAll(".portrait");
+
   femaleCards.forEach(card => {
-    const fullKey = card.getAttribute("data-portrait"); // e.g., "kolDragar-female1"
-    const shortKey = fullKey.split("-")[1]; // Extract "female1" from "kolDragar-female1"
-    const imgElement = card.querySelector(".player-portrait");
-    if (factionData.female[shortKey]) {
-      imgElement.src = factionData.female[shortKey];
+    const portraitKey = card.dataset.portrait; // e.g., "kolDragar-female1"
+    const shortKey = portraitKey.split("-")[1]; // Extracts "female1"
+
+    if (femaleData[shortKey]) {
+      const imgElement = card.querySelector(".player-portrait");
+      if (imgElement) {
+        imgElement.src = femaleData[shortKey].img;
+        imgElement.alt = femaleData[shortKey].alt;
+      }
     }
   });
+
+  console.log(`Portrait assets updated successfully for: ${factionKey}`);
 }
 // ============================================================================ //
 
 
 // ================ IDENTITY MODAL: PORTRAIT - SELECTED RACE PAGE  ================ //
 
+// This section handles the portrait selection within the identity modal. When a portrait card is clicked, it becomes "picked" (visually indicated by a CSS class), and any previously picked portrait is unpicked. The selected portrait's key is logged for tracking purposes, which can be integrated into your localStorage setup for saving player choices.
 // 1. Select all portrait cards
 const portraits = document.querySelectorAll(".portrait");
 
@@ -634,8 +765,9 @@ portraits.forEach(item => {
   });
 });
 
-// Setup a default layout initialization for page load (e.g., Kol Dragar)
-updatePortraitImages("kolDragar");
+if (playerChoices.faction) {
+  updatePortraitImages(playerChoices.faction.key);
+}
 
 // ============================================================================ //
 
