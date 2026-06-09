@@ -706,27 +706,79 @@ a {
 /* ========================= UI OVERLAY FOR NAME, GENER, & PORTRAIT SELECTION ========================= */
 
 /* =========================
-   MODAL
+   MODAL (FULL SCREEN OVERLAY)
 ========================= */
 
 #identity-modal.hidden {
   display: none !important;
 }
 
+/* This is the full-screen glass backdrop layer */
 .identity-modal {
-  position: relative;
-  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+
+  /* Center the inner content container perfectly on the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Frost effect on the backdrop overlay behind the content box */
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(15px) saturate(120%);
+  -webkit-backdrop-filter: blur(15px) saturate(120%);
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   MODAL INNER CONTENT BOX
+   (Add this class to your HTML inside the modal wrapper)
+========================= */
+.modal-content-wrapper {
   width: 90%;
   max-width: 850px;
+  /* Restores your perfect layout width */
+  max-height: 90vh;
+  /* Prevents overflow clipping on small monitors */
+  overflow-y: auto;
+  /* Adds a clean scrollbar inside the card if needed */
+
+  /* Solid content card background styling */
   background: rgba(20, 20, 20, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
-  margin: 0 auto;
   padding: 40px;
-  backdrop-filter: blur(12px);
-  box-shadow:
-    0 0 40px rgba(0, 0, 0, .5),
-    0 0 1px rgba(255, 255, 255, .1);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* =========================
+   HIDE MODAL SCROLLBAR
+========================= */
+
+.modal-content-wrapper {
+  /* For Chrome, Safari, and newer versions of Edge */
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling for mobile */
+}
+
+.modal-content-wrapper::-webkit-scrollbar {
+  display: none;
+  /* This hides the scrollbar entirely in Chrome/Safari */
+}
+
+.modal-content-wrapper {
+  -ms-overflow-style: none;
+  /* Hides scrollbar in Internet Explorer and old Edge */
+  scrollbar-width: none;
+  /* Hides scrollbar in Firefox */
 }
 
 /* =========================
@@ -735,6 +787,7 @@ a {
 
 .modal-header {
   text-align: center;
+  margin-top: -40px;
   margin-bottom: 35px;
 }
 

@@ -211,82 +211,96 @@
     <!-- Identity Modal (Name, Gender, Portrait) -->
     <div id="identity-modal" class="identity-modal hidden">
 
-        <div class="modal-header">
-            <h1>The Unbound</h1>
-            <p>
-                The path before you is yours alone.<br>
-                By what name shall Eldora know you?
-            </p>
-        </div>
+        <div class="modal-content-wrapper">
 
-        <div class="form-section">
-
-            <div class="input-group">
-                <label for="character-name">Name</label>
-                <input type="text" id="character-name" placeholder="Enter your name..." maxlength="30">
+            <div class="modal-header">
+                <h1>The Unbound</h1>
+                <p>
+                    The path before you is yours alone.<br>
+                    By what name shall Eldora know you?
+                </p>
             </div>
-            <div id="name-feedback" class="feedback-message"></div>
 
-            <div class="input-group">
-                <label>Biological Gender</label>
+            <div class="form-section">
 
-                <div class="gender-options">
-
-                    <button id="male-gender" class="gender-btn selected">
-                        Male
-                    </button>
-
-                    <button id="female-gender" class="gender-btn">
-                        Female
-                    </button>
-
+                <div class="input-group">
+                    <label for="character-name">Name</label>
+                    <input type="text" id="character-name" placeholder="Enter your name..." maxlength="30">
                 </div>
-            </div>
+                <div id="name-feedback" class="feedback-message"></div>
 
-            <div class="portrait-section">
-                <h2>Choose Your Portrait</h2>
+                <div class="input-group">
+                    <label>Biological Gender</label>
 
-                <div id="male-portraits" class="portrait-grid">
-                    <div class="portrait picked" data-portrait="kolDragar-male1"><img class="player-portrait" src=""
-                            alt=""></div>
-                    <div class="portrait" data-portrait="kolDragar-male2"><img class="player-portrait" src="" alt="">
-                    </div>
-                    <div class="portrait" data-portrait="kolDragar-male3"><img class="player-portrait" src="" alt="">
-                    </div>
-                    <div class="portrait" data-portrait="kolDragar-male4"><img class="player-portrait" src="" alt="">
-                    </div>
-                    <div class="portrait" data-portrait="kolDragar-male5"><img class="player-portrait" src="" alt="">
-                    </div>
-                    <div class="portrait" data-portrait="kolDragar-male6"><img class="player-portrait" src="" alt="">
+                    <div class="gender-options">
+
+                        <button id="male-gender" class="gender-btn selected">
+                            Male
+                        </button>
+
+                        <button id="female-gender" class="gender-btn">
+                            Female
+                        </button>
+
                     </div>
                 </div>
 
-                <div id="female-portraits" class="portrait-grid">
-                    <div class="portrait picked" data-portrait="kolDragar-female1"><img class="player-portrait" src=""
-                            alt=""></div>
-                    <div class="portrait" data-portrait="kolDragar-female2"><img class="player-portrait" src="" alt="">
+                <div class="portrait-section">
+                    <h2>Choose Your Portrait</h2>
+
+                    <div id="male-portraits" class="portrait-grid">
+                        <div class="portrait picked" data-portrait="kolDragar-male1"><img class="player-portrait" src=""
+                                alt=""></div>
+                        <div class="portrait" data-portrait="kolDragar-male2"><img class="player-portrait" src=""
+                                alt="">
+                        </div>
+                        <div class="portrait" data-portrait="kolDragar-male3"><img class="player-portrait" src=""
+                                alt="">
+                        </div>
+                        <div class="portrait" data-portrait="kolDragar-male4"><img class="player-portrait" src=""
+                                alt="">
+                        </div>
+                        <div class="portrait" data-portrait="kolDragar-male5"><img class="player-portrait" src=""
+                                alt="">
+                        </div>
+                        <div class="portrait" data-portrait="kolDragar-male6"><img class="player-portrait" src=""
+                                alt="">
+                        </div>
                     </div>
-                    <div class="portrait" data-portrait="kolDragar-female3"><img class="player-portrait" src="" alt="">
+
+                    <div id="female-portraits" class="portrait-grid">
+                        <div class="portrait picked" data-portrait="kolDragar-female1"><img class="player-portrait"
+                                src="" alt=""></div>
+                        <div class="portrait" data-portrait="kolDragar-female2"><img class="player-portrait" src=""
+                                alt="">
+                        </div>
+                        <div class="portrait" data-portrait="kolDragar-female3"><img class="player-portrait" src=""
+                                alt="">
+                        </div>
+                        <div class="portrait" data-portrait="kolDragar-female4"><img class="player-portrait" src=""
+                                alt="">
+                        </div>
+                        <div class="portrait" data-portrait="kolDragar-female5"><img class="player-portrait" src=""
+                                alt="">
+                        </div>
+                        <div class="portrait" data-portrait="kolDragar-female6"><img class="player-portrait" src=""
+                                alt="">
+                        </div>
                     </div>
-                    <div class="portrait" data-portrait="kolDragar-female4"><img class="player-portrait" src="" alt="">
-                    </div>
-                    <div class="portrait" data-portrait="kolDragar-female5"><img class="player-portrait" src="" alt="">
-                    </div>
-                    <div class="portrait" data-portrait="kolDragar-female6"><img class="player-portrait" src="" alt="">
-                    </div>
+
                 </div>
 
             </div>
 
-        </div>
+            <div class="modal-footer">
+                <button id="modal-Back-Btn" class="modal-btn">
+                    Back
+                </button>
+                <button id="modal-Continue-Btn" class="modal-btn">
+                    Continue
+                </button>
+            </div>
 
-        <div class="modal-footer">
-            <button id="modal-Back-Btn" class="modal-btn">
-                Back
-            </button>
-            <button id="modal-Continue-Btn" class="modal-btn">
-                Continue
-            </button>
         </div>
 
     </div>
