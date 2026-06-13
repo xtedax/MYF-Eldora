@@ -943,6 +943,7 @@ input:focus {
 
 .modal-btn {
   width: 30%;
+  margin-top: -20px;
   padding: 16px;
   border: none;
   border-radius: 12px;
