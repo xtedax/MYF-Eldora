@@ -436,6 +436,47 @@ backBtn.addEventListener('click', () => {
 // ============================================================================ //
 
 
+
+
+// ======================== TEST TAB PANEL ======================== //
+
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabPanels = document.querySelectorAll(".tab-panel");
+
+tabButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const targetTab = button.dataset.tab;
+
+    tabButtons.forEach(btn => {
+      btn.classList.remove("active");
+    });
+
+    tabPanels.forEach(panel => {
+      panel.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    document
+      .getElementById(targetTab)
+      .classList.add("active");
+
+  });
+
+});
+// ================================================================== //
+
+
+
+
+
+
+
+
+
+
 // ======================== RESPONSIVE MODAL ======================== //
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("mobileModal");
